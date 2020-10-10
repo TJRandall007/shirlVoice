@@ -20,4 +20,5 @@ export const font = {
 export const type = {
   default: "#262c42",
   dark: "#22283f",
+  muted: "#E2E8F0",
 };

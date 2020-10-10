@@ -24,6 +24,7 @@ const Layout = ({ location, children }) => {
         <Header
           siteTitle={data.site.siteMetadata?.title || `Title`}
           abs={location.pathname === "/"}
+          path={location.pathname}
         />
         <div>
           <main>{children}</main>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 
 import { ContainerDefault } from "../container/container";
+import Player from "../player/player";
 import { accent } from "../../theme";
 
 export default function Intro(props) {
@@ -11,12 +12,13 @@ export default function Intro(props) {
       <ContainerDefault>
         <IntroGrid className="flex gap-4 py-16">
           <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
-            <Box
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/5533931/pexels-photo-5533931.jpeg?auto=compress&cs=tinysrgb&h=730&w=1260)",
-              }}
-            />
+            <Box>
+              <Player
+                title="Commercial showreel"
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                image="https://images.pexels.com/photos/879814/pexels-photo-879814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </Box>
           </Parallax>
 
           <Parallax y={[-40, 40]} styleOuter={{ flex: 2 }}>
@@ -24,12 +26,13 @@ export default function Intro(props) {
           </Parallax>
 
           <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
-            <Box
-              style={{
-                backgroundImage:
-                  "url(https://images.pexels.com/photos/879814/pexels-photo-879814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)",
-              }}
-            />
+            <Box>
+              <Player
+                title="Imaging showreel"
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                image="https://images.pexels.com/photos/4652258/pexels-photo-4652258.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+              />
+            </Box>
           </Parallax>
         </IntroGrid>
       </ContainerDefault>
@@ -49,14 +52,17 @@ const IntroGrid = styled.div`
 const IntroCard = styled.div`
   height: 400px;
   background: white;
-  //   border: 16px solid ${accent};
   margin-top: -20px;
   flex: 2;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
 `;
 
 const Box = styled.div`
   background-position: cover;
   height: 360px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
 `;

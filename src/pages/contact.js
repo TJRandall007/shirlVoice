@@ -3,14 +3,14 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
+import Lead from "../components/lead/lead";
 
-const SecondPage = ({ location }) => (
+const Contact = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
+    <SEO title="Contact" />
+    <Lead title="Contact" />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );
 
-export default SecondPage;
+export default Contact;

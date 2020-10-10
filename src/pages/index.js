@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
@@ -16,7 +15,8 @@ export default function IndexPage(props) {
         sub="Professional female voice over artist"
       />
       <Intro />
-      {/* <Link to="/page-2/">Go to page 2</Link> */}
+
+      <div style={{ background: "white", height: "1000px" }}></div>
     </Layout>
   );
 }

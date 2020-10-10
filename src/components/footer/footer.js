@@ -8,9 +8,7 @@ export default function Footer(props) {
   return (
     <FooterContainer className="py-4">
       <ContainerDefault>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        © {new Date().getFullYear()} Shirl Voice
       </ContainerDefault>
     </FooterContainer>
   );
