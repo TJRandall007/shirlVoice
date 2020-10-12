@@ -4,11 +4,19 @@ import styled from "styled-components";
 
 import { accent, border, type } from "../../theme";
 
-export function Action(props) {
+export function Action({ to, value }) {
   return (
-    <ActionDefault to={props.to} className="px-5 py-3">
-      {props.value}
+    <ActionDefault to={to} className="px-5 py-3">
+      {value}
     </ActionDefault>
+  );
+}
+
+export function ActionSecondary({ to, value }) {
+  return (
+    <ActionSecondaryBtn to={to} className="px-5 py-3">
+      {value}
+    </ActionSecondaryBtn>
   );
 }
 
@@ -22,4 +30,8 @@ const ActionDefault = styled(Link)`
     background: ${accent};
     border-color: ${accent};
   }
+`;
+
+const ActionSecondaryBtn = styled(ActionDefault)`
+  border-color: transparent;
 `;

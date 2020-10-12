@@ -75,6 +75,13 @@ export default function Player(props) {
     audio.addEventListener("pause", handlePause);
     audio.addEventListener("loadeddata", handleLoadData);
     audio.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
+      audio.removeEventListener("loadeddata", handleLoadData);
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+    };
   }, []);
 
   return (

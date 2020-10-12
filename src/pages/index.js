@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 
 import Hero from "../components/hero/hero";
 import Intro from "../components/intro/intro";
+import Clients from "../components/clients/clients";
 
 export default function IndexPage(props) {
   return (
@@ -15,8 +16,7 @@ export default function IndexPage(props) {
         sub="Professional female voice over artist"
       />
       <Intro />
-
-      <div style={{ background: "white", height: "1000px" }}></div>
+      <Clients />
     </Layout>
   );
 }
