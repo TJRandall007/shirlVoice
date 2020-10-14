@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { ParallaxProvider, useController } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 import styled from "styled-components";
 
 import Header from "../header/header";
@@ -9,18 +9,6 @@ import Footer from "../footer/footer";
 import "./layout.css";
 
 import { type } from "../../theme";
-
-const ParallaxCache = () => {
-  const { parallaxController } = useController();
-
-  useLayoutEffect(() => {
-    const handler = () => parallaxController.update();
-    window.addEventListener("load", handler);
-    return () => window.removeEventListener("load", handler);
-  }, [parallaxController]);
-
-  return null;
-};
 
 const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
@@ -46,7 +34,6 @@ const Layout = ({ location, children }) => {
           <Footer />
         </div>
       </LayoutWrapper>
-      <ParallaxCache />
     </ParallaxProvider>
   );
 };
