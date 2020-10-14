@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { ContainerDefault } from "../container/container";
 import { Action } from "../action/action";
 import { MainTitle } from "../type/heading";
-import { background, font, type } from "../../theme";
+import { background, type } from "../../theme";
 
 export default function Hero(props) {
   return (

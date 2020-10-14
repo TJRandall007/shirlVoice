@@ -44,7 +44,7 @@ export default function Clients(props) {
     <ClientsContainer className="py-32">
       <ContainerDefault>
         <SectionTitle classes="pb-16" text="Clients I've worked with" />
-        <ClientsGrid className="grid grid-flow-col grid-cols-4 grid-rows-3 gap-4">
+        <ClientsGrid className="grid grid-flow-col grid-cols-4 grid-rows-3 gap-x-4">
           {clients.map(({ name, fileName }, index) => (
             <Client key={index} i={index} name={name} fileName={fileName} />
           ))}

@@ -12,7 +12,7 @@ export default function Intro(props) {
   return (
     <IntroContainer>
       <ContainerDefault>
-        <IntroGrid className="flex gap-4 py-16">
+        <IntroGrid className="flex gap-x-4 py-16">
           <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player

@@ -82,6 +82,7 @@ export default function Player(props) {
       audio.removeEventListener("loadeddata", handleLoadData);
       audio.removeEventListener("timeupdate", handleTimeUpdate);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -106,7 +107,6 @@ export default function Player(props) {
         <Cover />
         <Background style={{ backgroundImage: `url("${props.image}")` }} />
       </PlayerContainer>
-
       <audio src={props.src} preload="metadata" type="audio/mp3" ref={audioRef}>
         Your browser does not support the
         <code>audio</code> element.

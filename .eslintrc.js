@@ -1,0 +1,5 @@
+module.exports = {
+  rules: {
+    "jsx-a11y/media-has-caption": "off",
+  },
+};

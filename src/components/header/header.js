@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import { Link as A } from "gatsby";
 import styled from "styled-components";
