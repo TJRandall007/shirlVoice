@@ -86,11 +86,7 @@ export default function Player(props) {
 
   return (
     <>
-      <PlayerContainer
-        style={{
-          backgroundImage: `url(${props.image})`,
-        }}
-      >
+      <PlayerContainer>
         <PlayerTitle>{props.title}</PlayerTitle>
         <Timer>
           {time}/{duration}
@@ -108,6 +104,7 @@ export default function Player(props) {
         <Button className={playing ? "" : "play"} onClick={handleButtonPress} />
         <Seeker style={{ width: `${percent}%` }} />
         <Cover />
+        <Background style={{ backgroundImage: `url("${props.image}")` }} />
       </PlayerContainer>
 
       <audio src={props.src} preload="metadata" type="audio/mp3" ref={audioRef}>
@@ -123,19 +120,50 @@ const PlayerContainer = styled.div`
   height: 100%;
   display: block;
   background-color: black;
-  background-size: cover;
+
   position: relative;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: ${accent};
+    border-radius: 12px;
+    transform: rotate(-4deg);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    z-index: -1;
+  }
 `;
 
 const Cover = styled.div`
   background: rgba(34, 40, 63, 0.5);
+  border-radius: 12px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 0;
+  z-index: 2;
+`;
+
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 `;
 
 const PlayerTitle = styled.h3`
@@ -144,7 +172,7 @@ const PlayerTitle = styled.h3`
   line-height: 1.2em;
   padding-right: 50%;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 `;
 
 const Volume = styled.div`
@@ -152,8 +180,8 @@ const Volume = styled.div`
   position: absolute;
   bottom: 30px;
   right: 90px;
-  z-index: 2;
   transform: scaleY(-1);
+  z-index: 10;
 `;
 
 const Bar = styled.div`
@@ -164,6 +192,7 @@ const Bar = styled.div`
   margin-left: 5px;
   float: left;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 10;
 
   &:hover {
     cursor: pointer;
@@ -180,7 +209,7 @@ const Timer = styled.span`
   position: relative;
   margin-top: 10px;
   display: block;
-  z-index: 2;
+  z-index: 10;
 `;
 
 const Seeker = styled.div`
@@ -190,7 +219,7 @@ const Seeker = styled.div`
   left: 0;
   bottom: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 5;
 `;
 
 const Button = styled.button`
@@ -205,8 +234,9 @@ const Button = styled.button`
   position: absolute;
   bottom: 20px;
   right: 20px;
-  z-index: 2;
+
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 10;
 
   &:focus {
     outline: none;

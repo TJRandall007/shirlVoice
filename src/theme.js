@@ -1,4 +1,5 @@
 export const accent = "#f7c0c4";
+export const accentMuted = "#fad5d6";
 
 export const background = {
   light: "#F6F8FE",

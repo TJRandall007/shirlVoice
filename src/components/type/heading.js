@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { font, type } from "../../theme";
+import { accent, font, type } from "../../theme";
 
 export function MainTitle({ text }) {
   return <Main className="lg:text-6xl md:text-4xl text-3xl">{text}</Main>;
@@ -9,9 +9,19 @@ export function MainTitle({ text }) {
 
 export function SectionTitle({ classes, text }) {
   return (
-    <Section className={`lg:text-5xl md:text-4xl text-3xl ${classes}`}>
+    <Section
+      className={`lg:text-5xl md:text-4xl text-3xl text-center ${classes}`}
+    >
       {text}
     </Section>
+  );
+}
+
+export function SectionMinorTitle({ classes, text }) {
+  return (
+    <SectionMinor className={`lg:text-4xl md:text-3xl text-2xl ${classes}`}>
+      {text}
+    </SectionMinor>
   );
 }
 
@@ -29,5 +39,16 @@ const Section = styled.h2`
   line-height: 1.1em;
   font-family: ${font.sans.family};
   font-weight: ${font.sans.weight};
-  text-align: center;
+`;
+
+const SectionMinor = styled(Section)`
+  &:after {
+    content: "";
+    width: 32px;
+    height: 4px;
+    background: ${accent};
+    display: block;
+    position: absolute;
+    margin-left: 1px;
+  }
 `;

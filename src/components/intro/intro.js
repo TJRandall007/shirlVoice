@@ -13,7 +13,7 @@ export default function Intro(props) {
     <IntroContainer>
       <ContainerDefault>
         <IntroGrid className="flex gap-4 py-16">
-          <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
+          <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player
                 title="Commercial showreel"
@@ -23,7 +23,7 @@ export default function Intro(props) {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ flex: 2 }}>
+          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
             <IntroCard className="p-8">
               <h2>About me</h2>
               <p>
@@ -51,7 +51,7 @@ export default function Intro(props) {
             </IntroCard>
           </Parallax>
 
-          <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
+          <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player
                 title="Imaging showreel"
@@ -84,7 +84,6 @@ const IntroCard = styled.div`
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-
   h2 {
     font-size: 2rem;
     font-family: ${font.sans.family};
@@ -102,9 +101,6 @@ const IntroCard = styled.div`
 const Box = styled.div`
   background-position: cover;
   height: 360px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
-  overflow: hidden;
 `;
 
 const Actions = styled.div`

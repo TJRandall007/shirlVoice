@@ -6,6 +6,8 @@ import SEO from "../components/seo";
 import Hero from "../components/hero/hero";
 import Intro from "../components/intro/intro";
 import Clients from "../components/clients/clients";
+import { Banner } from "../components/roadblock/banner";
+import { Contact } from "../components/roadblock/contact";
 
 export default function IndexPage(props) {
   return (
@@ -17,6 +19,8 @@ export default function IndexPage(props) {
       />
       <Intro />
       <Clients />
+      <Banner />
+      <Contact />
     </Layout>
   );
 }
