@@ -5,21 +5,19 @@ import { ContainerDefault } from "../container/container";
 
 import { accent } from "../../theme";
 
-export const Banner = () => (
+export const Banner = ({ text, name, company }) => (
   <BannerContainer className="lg:pt-32 lg:pb-24">
     <ContainerDefault>
       <BannerContainerInner>
-        <BannerQuote className="lg:text-5xl lg:px-64">
+        <BannerQuote className="lg:text-5xl lg:px-32">
           <BannerMark>"</BannerMark>
-          <BannerText>
-            Always friendly, happy to help and a joy to work with
-          </BannerText>
+          <BannerText>{text}</BannerText>
           <BannerMark>"</BannerMark>
         </BannerQuote>
         <BannerFooter className="lg:px-64 pt-8">
           –{" "}
           <BannerCite>
-            <strong>Jonathan Young</strong>, Producer, Capital FM
+            <strong>{name}</strong>, {company}
           </BannerCite>
         </BannerFooter>
       </BannerContainerInner>

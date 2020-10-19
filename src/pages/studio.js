@@ -1,15 +1,21 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import Lead from "../components/lead/lead";
+import { Banner } from "../components/roadblock/banner";
+import { Contact } from "../components/roadblock/contact";
 
 const Studio = ({ location }) => (
   <Layout location={location}>
     <SEO title="Studio" />
     <Lead title="Studio" />
-    <Link to="/">Go back to the homepage</Link>
+    <Banner
+      text="A true professional voiceover - terrific fun and brilliant to work with"
+      name="Ed Scott"
+      company="Executive Producer, Universal Music UK"
+    />
+    <Contact />
   </Layout>
 );
 

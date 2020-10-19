@@ -19,7 +19,11 @@ export default function IndexPage(props) {
       />
       <Intro />
       <Clients />
-      <Banner />
+      <Banner
+        text="Always friendly, happy to help and a joy to work with"
+        name="Jonathan Young"
+        company="Producer, Capital FM"
+      />
       <Contact />
     </Layout>
   );
