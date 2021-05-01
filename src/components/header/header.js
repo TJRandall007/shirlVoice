@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { ContainerDefault } from "../container/container";
 import { accent, background } from "../../theme";
 
+import LogoImg from "../../images/SV.png";
+
 function Link(props) {
   const active = props.path === props.to;
 
@@ -21,7 +23,7 @@ export default function Header(props) {
   return (
     <HeaderContainer className={props.abs ? "floating" : ""}>
       <ContainerDefault>
-        <Brand />
+        <Brand href="/" />
         <Navigation>
           <Links>
             <Link to="/" value="Home" path={props.path} />
@@ -52,10 +54,11 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const Brand = styled.div`
+const Brand = styled.a`
   width: 60px;
   height: 60px;
-  background: #ddd;
+  background-image: url(${LogoImg});
+  background-size: contain;
   margin-top: 20px;
   float: left;
 `;

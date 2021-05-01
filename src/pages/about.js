@@ -26,8 +26,8 @@ const About = ({ location }) => (
             </strong>
           </p>
           <p>
-            Voice over work has always been at the forefront of my career ever
-            since I started the industry as a young actress.
+            Voice over work has always been at the forefront of my career since
+            I started the industry as a young actress.
           </p>
           <p>
             I trained at a stage school in London (Corona Academy), completing
@@ -40,8 +40,8 @@ const About = ({ location }) => (
             Based in Kent, I am within easy reach of London, with incredible
             flexibility and ability to give a fast turnaround for your project.
             With excellent communication skills and the ability to take
-            direction and initiative, I am renowned with producers as a female
-            voice over who can “nail a script” on the first take.
+            direction, I am renowned with producers as a female voice over who
+            can “nail a script” on the first take.
           </p>
           <p>
             With a commercial voice that ranges from bright and upbeat to smooth
@@ -49,9 +49,9 @@ const About = ({ location }) => (
           </p>
           <p>
             Despite my immense skill and experience, my talent continues to be
-            refined and improved all the more, attending voice-over master
+            refined and improved all the time, attending voice-over master
             classes and having ongoing professional voice coaching with the
-            world-renowned voice-over coach{" "}
+            world-renowned voice-over coach world-renowned voice-over coach{" "}
             <a href="https://braintracksaudio.com/">
               Nancy Wolfson at Braintracks Audio
             </a>
@@ -71,11 +71,11 @@ const About = ({ location }) => (
           </p>
           <hr />
           <p>
-            Just call this your one-stop-shop as not only can I supply an
-            astounding voice for your project, but we can also supply the music!
+            Just call this your one-stop-shop, as not only can I supply an
+            outstanding voice for your project, but I can also supply the music!
           </p>
           <p>
-            Beats Bakery is our very own music production library, with a track
+            Beats Bakery is my very own music production library, with a track
             suited for your every need. Head over to listen to some of the
             amazing albums that can be featured on your next project at{" "}
             <a href="https://beatsbakery.com/">beatsbakery.com</a>.

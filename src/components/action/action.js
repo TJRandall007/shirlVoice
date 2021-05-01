@@ -4,9 +4,13 @@ import styled from "styled-components";
 
 import { accent, border, type } from "../../theme";
 
-export function Action({ to, value, classes }) {
+export function Action({ to, value, classes, download = null }) {
   return (
-    <ActionDefault to={to} className={`px-5 py-3 ${classes}`}>
+    <ActionDefault
+      to={to}
+      className={`px-5 py-3 ${classes}`}
+      download={download}
+    >
       {value}
     </ActionDefault>
   );

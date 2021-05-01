@@ -67,7 +67,7 @@ export default function Player(props) {
   useEffect(() => {
     const audio = audioRef.current;
 
-    audio.volume = 0.6;
+    audio.volume = 0.4;
 
     audio.load();
 
@@ -214,6 +214,7 @@ const Timer = styled.span`
 
 const Seeker = styled.div`
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
   position: absolute;
   top: 0;
   left: 0;

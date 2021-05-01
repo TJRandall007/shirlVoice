@@ -62,8 +62,9 @@ const ClientsGrid = styled.div``;
 
 const ClientsBlock = styled.span`
   height: 200px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
   text-indent: -1000%;
 `;

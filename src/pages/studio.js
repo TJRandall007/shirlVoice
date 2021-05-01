@@ -30,11 +30,11 @@ const Intro = () => (
 );
 
 const List = ({ title, items }) => (
-  <div className="w-1/2 float-left inline-block">
-    <h2>{title}</h2>
+  <div>
+    <h2 className="font-semibold pb-2">{title}</h2>
     <ul>
       {items.map((i) => (
-        <li key={i}>{i}</li>
+        <Item key={i}>{i}</Item>
       ))}
     </ul>
   </div>
@@ -66,9 +66,11 @@ const Lists = () => {
   ];
 
   return (
-    <StudioLists className="lg:w-8/12 lg:text-lg mx-auto pt-12 fpp">
-      <List title={"Studio Facilities"} items={left} />
-      <List title={"Professional Voice over"} items={right} />
+    <StudioLists className="lg:w-8/12 lg:text-lg mx-auto">
+      <div className="grid grid-cols-2 gap-4 py-12 pb-32">
+        <List title={"Studio Facilities"} items={left} />
+        <List title={"Professional Voice over"} items={right} />
+      </div>
     </StudioLists>
   );
 };
@@ -111,6 +113,14 @@ const StudioIntro = styled.div`
 
   p {
     padding-bottom: 1em;
+  }
+`;
+
+const Item = styled.li`
+  &:before {
+    content: "•";
+    color: #f7c0c4;
+    padding-right: 3px;
   }
 `;
 

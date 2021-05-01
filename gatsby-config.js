@@ -28,18 +28,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `DM Serif Display`,
-            variants: [`400`],
-          },
-          {
-            family: `Rubik`,
-            variants: [`400`, `500`, `600`, `900`],
-          },
-        ],
+        fonts: [`DM Serif Display\:400`, `Rubik\:400,500,600,900`],
+        display: "swap",
       },
     },
     {

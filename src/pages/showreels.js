@@ -14,19 +14,15 @@ import { SectionMinorTitle } from "../components/type/heading";
 
 import { accent } from "../theme";
 
-const SectionPlayer = ({ title, img }) => (
+const SectionPlayer = ({ title, img, src }) => (
   <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
     <SectionGridPlayer>
-      <Player
-        title={`${title} showreel`}
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-        image={img}
-      />
+      <Player title={`${title} showreel`} src={src} image={img} />
     </SectionGridPlayer>
   </Parallax>
 );
 
-const SectionCopy = ({ title, left, children }) => (
+const SectionCopy = ({ title, left, children, download }) => (
   <SectionGridCopy className="flex align-center">
     <div>
       <SectionMinorTitle classes="pb-6 text-left leading-3" text={title} />
@@ -34,25 +30,35 @@ const SectionCopy = ({ title, left, children }) => (
       <Action
         classes="mt-2 inline-block"
         value={`Download ${title}`}
-        to="#foo"
+        to={`${download}.zip`}
       />
     </div>
   </SectionGridCopy>
 );
 
-const Section = ({ title, img, left, children }) => (
+const Section = ({ title, img, src, left, children }) => (
   <section>
     <SectionGrid className="lg:py-16">
       {left && (
         <>
-          <SectionPlayer title={title} img={img} />
-          <SectionCopy title={title} left={left} children={children} />
+          <SectionPlayer title={title} img={img} src={src} />
+          <SectionCopy
+            title={title}
+            left={left}
+            children={children}
+            download={src}
+          />
         </>
       )}
       {!left && (
         <>
-          <SectionCopy title={title} left={left} children={children} />
-          <SectionPlayer title={title} img={img} />
+          <SectionCopy
+            title={title}
+            left={left}
+            children={children}
+            download={src}
+          />
+          <SectionPlayer title={title} img={img} src={src} />
         </>
       )}
     </SectionGrid>
@@ -100,6 +106,7 @@ const Showreels = ({ location }) => (
           title="Commercial"
           left={true}
           img="https://images.pexels.com/photos/3971985/pexels-photo-3971985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
         >
           <p>
             Having voiced countless commercials, I can guarantee seamless
@@ -113,6 +120,7 @@ const Showreels = ({ location }) => (
           title="Imaging"
           left={false}
           img="https://images.pexels.com/photos/4090902/pexels-photo-4090902.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Imaging_Demo_Shirlie_Randall.mp3"
         >
           <p>
             Currently the female imaging voice for Virgin Radio and KMFM, once
@@ -126,6 +134,7 @@ const Showreels = ({ location }) => (
           title="Narration"
           left={true}
           img="https://images.pexels.com/photos/1337753/pexels-photo-1337753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Narration_Demo_Shirlie_Randall.mp3"
         >
           <p>
             My voice can be naturally warm and friendly for narration, but I can
@@ -138,16 +147,20 @@ const Showreels = ({ location }) => (
           title="Continuity"
           left={false}
           img="https://images.pexels.com/photos/765139/pexels-photo-765139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Continuity_Demo_Shirlie_Randall%20.mp3"
         >
           <p>
-            With a natural and warm tone, I can provide a smooth and ebbless
-            flow between programming for T.V. and Radio.
+            With a natural and warm and friendly tone and an ability for
+            improvisation and script writing, I can provide a smooth and ebbless
+            flow between programming for TV and Radio, perfect for any of your
+            continuity needs.
           </p>
         </Section>
         <Section
           title="Vocals (Jingles)"
           left={true}
           img="https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Jingle_Demo_Shirlie_Randall.mp3"
         >
           <p>
             From being classically trained since the age of 9 to featuring on
@@ -161,6 +174,7 @@ const Showreels = ({ location }) => (
           title="Singing"
           left={false}
           img="https://images.pexels.com/photos/258890/pexels-photo-258890.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://storage.googleapis.com/shirl-voice/audio/Singing_Demo_Shirlie_Randall.mp3"
         >
           <p>
             With my singing experience and professional training, I can provide
