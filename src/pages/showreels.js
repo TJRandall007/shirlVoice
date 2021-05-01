@@ -70,13 +70,13 @@ const Intro = () => (
 
     <p>
       My skills stretch beyond just radio stations, as alongside this, I have
-      voiced countless T.V. commercials and corporate campaigns, both local,
+      voiced countless TV commercials and corporate campaigns, both local,
       national, and global.
     </p>
 
     <p>
       With great competency, excellent skills, and years of experience, I can
-      bring a high degree of quality and creative experience to your project
+      bring a high degree of quality and creative experience to your project,
       with undeniable professionalism and a bright voice that you won’t find
       anywhere else.
     </p>
