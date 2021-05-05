@@ -185,9 +185,9 @@ const Showreels = ({ location }) => (
         </Section>
       </ContainerDefault>
       <Banner
-        text="I need one more testimonial to go here"
-        name="Jon Reader"
-        company="Website maker"
+        text="You're just the best at what you do - what more is there to say!"
+        name="Danny Rhodes"
+        company="KMFM Audio Producer"
       />
       <Contact />
     </ShowreelsContainer>
