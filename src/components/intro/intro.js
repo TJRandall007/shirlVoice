@@ -29,15 +29,18 @@ export default function Intro(props) {
             <IntroCard className="p-8">
               <h2>About me</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas risus lacus, tincidunt eu fermentum et, pharetra nec
-                est.
+                I’m Shirlie Randall, and have been the voice for numerous brands
+                and projects for over 20 years! I can adapt my voice to whatever
+                style your project requires, from bright and upbeat to smooth
+                and sultry or natural and warm to cool and fresh, plus many
+                more.
               </p>
+
               <p>
-                Mauris porttitor nec tellus auctor aliquam. Donec quis accumsan
-                augue. Donec eu tortor viverra, commodo urna nec, suscipit
-                dolor. Ut sapien magna, porta a accumsan non, euismod vel velit.
-                Maecenas varius luctus pellentesque.
+                With excellent communication skills, I am renowned with
+                <br />
+                producers as a female voice over who can “nail a script” <br />
+                on the first take.
               </p>
 
               <Signature />
@@ -75,7 +78,7 @@ const IntroGrid = styled.div`
 `;
 
 const IntroCard = styled.div`
-  height: 400px;
+  height: 375px;
   background: white;
   margin-top: -20px;
   flex: 2;
