@@ -25,6 +25,14 @@ export function SectionMinorTitle({ classes, text }) {
   );
 }
 
+export function SectionMiniTitle({ classes, text }) {
+  return (
+    <SectionMinor className={`lg:text-3xl md:text-2xl text-1xl ${classes}`}>
+      {text}
+    </SectionMinor>
+  );
+}
+
 const Main = styled.h1`
   color: ${type.default};
   font-weight: 500;

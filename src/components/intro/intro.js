@@ -19,7 +19,7 @@ export default function Intro(props) {
               <Player
                 title="Commercial showreel"
                 src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                image="https://images.pexels.com/photos/879814/pexels-photo-879814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                image="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
                 src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
               />
             </Box>
@@ -57,7 +57,7 @@ export default function Intro(props) {
               <Player
                 title="Imaging showreel"
                 src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                image="https://images.pexels.com/photos/4652258/pexels-photo-4652258.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                image="https://storage.googleapis.com/shirl-voice/images/players/imaging.jpg"
                 src="https://storage.googleapis.com/shirl-voice/audio/Imaging_Demo_Shirlie_Randall.mp3"
               />
             </Box>

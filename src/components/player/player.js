@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+
+import { playerAtom } from "../../store";
 
 import { accent, type } from "../../theme";
 
@@ -11,8 +14,12 @@ const defaultVolumes = [
 ];
 
 export default function Player(props) {
-  const audioRef = useRef();
+  const [player, setPlayer] = useRecoilState(playerAtom);
 
+  const audioRef = useRef();
+  const seekRef = useRef();
+
+  const [interacted, setInteracted] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [time, setTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -28,27 +35,34 @@ export default function Player(props) {
 
     setTime(timeString(audio.currentTime));
 
-    if (audio.duration)
-      setPercent(parseInt((100 * audio.currentTime) / audio.duration));
+    if (audio.duration) {
+      setPercent((audio.currentTime / audio.duration) * 100);
+
+      if (audio.currentTime >= audio.duration) setPlaying(false);
+    }
   }
 
   function handleLoadData() {
     setDuration(timeString(audioRef.current.duration));
   }
 
-  function handlePlay() {
-    setPlaying(true);
-  }
+  function handlePlay() {}
 
-  function handlePause() {
-    setPlaying(false);
+  function handlePause() {}
+
+  function handleSeek(e) {
+    const per = e.nativeEvent.offsetX / seekRef.current.offsetWidth;
+
+    const audio = audioRef.current;
+
+    audio.currentTime = per * audio.duration;
+
+    if (!playing) handleButtonPress();
   }
 
   function handleButtonPress() {
-    const audio = audioRef.current;
-
-    if (playing) audio.pause();
-    else audio.play();
+    setInteracted(true);
+    setPlaying(!playing);
   }
 
   function handleVolumePress(index) {
@@ -63,6 +77,23 @@ export default function Player(props) {
 
     setVolumnes(v);
   }
+
+  useEffect(() => {
+    if (!interacted) return;
+
+    playing && setPlayer(props.title);
+
+    const audio = audioRef.current;
+
+    if (playing) audio.play();
+    else audio.pause();
+  }, [playing]);
+
+  useEffect(() => {
+    if (player === null) return;
+
+    if (props.title !== player) setPlaying(false);
+  }, [player]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -103,7 +134,14 @@ export default function Player(props) {
           ))}
         </Volume>
         <Button className={playing ? "" : "play"} onClick={handleButtonPress} />
-        <Seeker style={{ width: `${percent}%` }} />
+        <Seeker ref={seekRef} onClick={handleSeek}>
+          <SeekerPip
+            style={{ left: `${percent}%`, opacity: `${percent > 0 ? 1 : 0}` }}
+          />
+          <SeekerProgress style={{ width: `${percent}%` }} />
+          <SeekerBackground />
+        </Seeker>
+
         <Cover />
         <Background style={{ backgroundImage: `url("${props.image}")` }} />
       </PlayerContainer>
@@ -187,7 +225,7 @@ const Volume = styled.div`
 const Bar = styled.div`
   width: 5px;
   height: 100%;
-  background: #888;
+  background: black;
   border-radius: 1px;
   margin-left: 5px;
   float: left;
@@ -213,14 +251,63 @@ const Timer = styled.span`
 `;
 
 const Seeker = styled.div`
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+  height: 12px;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 150px;
+  z-index: 5;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const SeekerBackground = styled.div`
+  width: 100%;
+  background: black;
+  border-radius: 200px;
+
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
-  pointer-events: none;
-  z-index: 5;
+  left: 0;
+  z-index: 6;
+
+  &:hover {
+    background: #111111;
+  }
+`;
+
+const SeekerProgress = styled.div`
+  width: 0px;
+  background: ${accent};
+  transition: width 0.2s ease-in-out;
+  border-radius: 200px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 7;
+`;
+
+const SeekerPip = styled.div`
+  width: 5px;
+  height: 20px;
+  background: white;
+
+  border-radius: 200px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  margin-left: -4px;
+
+  transition: all 0.2s ease-in-out;
+  z-index: 8;
 `;
 
 const Button = styled.button`

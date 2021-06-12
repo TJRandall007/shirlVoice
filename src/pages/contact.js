@@ -8,7 +8,7 @@ import Lead from "../components/lead/lead";
 const Contact = ({ location }) => (
   <Layout location={location}>
     <SEO title="Contact" />
-    <Lead title="Contact" />
+    <Lead title="Shirlie Randall — Contact" />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );

@@ -16,7 +16,7 @@ export default function Hero(props) {
             <Sub className="lg:text-2xl md:text-xl pb-12">{props.sub}</Sub>
           </Headers>
 
-          <Action to="/showreels" value="Listen to showreels" />
+          <Action to="/audio-samples/" value="Listen to showreels" />
           <ImageContainer>
             <img
               src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"

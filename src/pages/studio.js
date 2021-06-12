@@ -22,9 +22,9 @@ const Intro = () => (
     </p>
 
     <p>
-      If needed, I am within easy reach of central London and available to
-      travel to a studio of your choice. Alternatively, you can direct me
-      remotely using Skype, Source Connect, ipDTL or Cleanfeed.
+      If needed, I’m within easy reach of central London and available to travel
+      to a studio of your choice. Alternatively, you can direct me remotely
+      using Skype, Source Connect, ipDTL or Cleanfeed.
     </p>
   </StudioIntro>
 );
@@ -47,20 +47,17 @@ const Lists = () => {
     "Focusrite Scarlett 2i2",
     "Rokit8 Monitors",
     "Adobe Audition Software",
-    "Studio Acoustic Panels",
-    "Soundproofing",
-    "“Big Mac” computer",
-    "Comfy Chair!",
+    "Broadcast quality studio",
+    "iMac Computer",
   ];
 
   const right = [
     "Fast Turnaround",
     "Creative & Flexible",
     "Experienced Female Voiceover",
-    "Skype, ISDN, Cleanfeed",
+    "Skype, Cleanfeed",
     "Source Connect, ipDTL",
     "Broadcast quality studio",
-    "mp3, wav and aiff",
     "British RP",
     "Friendly & Reliable",
   ];
@@ -78,7 +75,7 @@ const Lists = () => {
 const Studio = ({ location }) => (
   <Layout location={location}>
     <SEO title="Studio" />
-    <Lead title="Studio" />
+    <Lead title="Shirlie Randall — Studio" />
     <StudioContainer className="py-16">
       <ContainerDefault>
         <Intro />
