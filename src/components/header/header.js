@@ -23,7 +23,7 @@ export default function Header(props) {
   return (
     <HeaderContainer className={props.abs ? "floating" : ""}>
       <ContainerDefault>
-        <Brand>
+        <Brand href="/" title="Go to homepage">
           <svg
             version="1.1"
             id="Layer_1"
