@@ -10,7 +10,9 @@ export function MainTitle({ text }) {
 export function SectionTitle({ classes, text }) {
   return (
     <Section
-      className={`lg:text-5xl md:text-4xl text-3xl text-center ${classes}`}
+      className={`lg:text-5xl md:text-4xl text-3xl text-center ${
+        classes ? classes : ""
+      }`}
     >
       {text}
     </Section>
@@ -19,7 +21,9 @@ export function SectionTitle({ classes, text }) {
 
 export function SectionMinorTitle({ classes, text }) {
   return (
-    <SectionMinor className={`lg:text-4xl md:text-3xl text-2xl ${classes}`}>
+    <SectionMinor
+      className={`lg:text-3xl md:text-2xl text-1xl ${classes ? classes : ""}`}
+    >
       {text}
     </SectionMinor>
   );
@@ -27,7 +31,9 @@ export function SectionMinorTitle({ classes, text }) {
 
 export function SectionMiniTitle({ classes, text }) {
   return (
-    <SectionMinor className={`lg:text-3xl md:text-2xl text-1xl ${classes}`}>
+    <SectionMinor
+      className={`lg:text-3xl md:text-2xl text-1xl ${classes ? classes : ""}`}
+    >
       {text}
     </SectionMinor>
   );

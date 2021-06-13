@@ -6,11 +6,9 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import { Banner } from "../components/roadblock/banner";
 import { Contact } from "../components/roadblock/contact";
-import { Action } from "../components/action/action";
 import { ContainerDefault } from "../components/container/container";
 import Lead from "../components/lead/lead";
-import Player from "../components/player/player";
-import { SectionMiniTitle } from "../components/type/heading";
+import { SectionTitle, SectionMiniTitle } from "../components/type/heading";
 
 import { accent } from "../theme";
 
@@ -56,18 +54,37 @@ const Showreels = ({ location }) => (
     <ShowreelsContainer className="py-16">
       <ContainerDefault>
         <Intro />
+        <div className="pt-24">
+          <SectionTitle text="TV Advertising" classes="pb-10" />
 
-        <div className="pt-24 grid grid-cols-3 gap-8 pb-16">
-          <VideoGroup id="brjGZcMftqg" title="Crosse and Blackwell" />
-          <VideoGroup id="YDMUKlOQfb8" title="Abellio Greater Anglia" />
-          <VideoGroup id="P0lDmfj9Xis" title="Lotto Go" />
-          <VideoGroup id="bqpGmArQiL8" title="Nextdoor App" />
-          <VideoGroup id="rHenWt5-x1U" title="Sky Vegas" />
-          <VideoGroup id="gSGrPSTgAgk" title="Selfie Mic" />
-          <VideoGroup id="-M4eEFR93SE" title="Equazen" />
-          <VideoGroup id="nLZn1S8NEas" title="Kiddizoom Duo" />
-          <VideoGroup id="Ghsi0O64gzM" title="Paddington 2" />
-          <VideoGroup id="wd9O2YUmf4Q" title="Weight Watchers" />
+          <div className=" grid grid-cols-3 gap-8 pb-16">
+            <VideoGroup id="brjGZcMftqg" title="Crosse and Blackwell" />
+            <VideoGroup id="gSGrPSTgAgk" title="Selfie Mic" />
+            <VideoGroup id="P0lDmfj9Xis" title="Lotto Go" />
+            <VideoGroup id="YDMUKlOQfb8" title="Abellio Greater Anglia" />
+            <VideoGroup id="rHenWt5-x1U" title="Sky Vegas" />
+            <VideoGroup id="-M4eEFR93SE" title="Equazen" />
+          </div>
+        </div>
+
+        <div>
+          <SectionTitle text="Online Videos" classes="pt-10 pb-10" />
+          <div className="grid grid-cols-3 gap-8 pb-16">
+            <VideoGroup id="wd9O2YUmf4Q" title="Weight Watchers" />
+            <VideoGroup id="bqpGmArQiL8" title="Nextdoor App" />
+            <VideoGroup id="A0uVkz-jJN4" title="My Morrisons" />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-8 pb-16">
+          <div>
+            <SectionTitle text="Continuity" classes="pt-10 pb-10" />
+            <VideoGroup id="nLZn1S8NEas" title="Kiddizoom Duo" />
+          </div>
+          <div>
+            <SectionTitle text="Singing Advert" classes="pt-10 pb-10" />
+            <VideoGroup id="Ghsi0O64gzM" title="Paddington 2" />
+          </div>
         </div>
       </ContainerDefault>
       <Banner
