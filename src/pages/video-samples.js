@@ -79,11 +79,15 @@ const Showreels = ({ location }) => (
         <div className="grid grid-cols-3 gap-8 pb-16">
           <div>
             <SectionTitle text="Continuity" classes="pt-10 pb-10" />
-            <VideoGroup id="nLZn1S8NEas" title="Kiddizoom Duo" />
+            <VideoGroup id="Ghsi0O64gzM" title="Paddington 2" />
           </div>
           <div>
             <SectionTitle text="Singing Advert" classes="pt-10 pb-10" />
-            <VideoGroup id="Ghsi0O64gzM" title="Paddington 2" />
+            <VideoGroup id="nLZn1S8NEas" title="Kiddizoom Duo" />
+          </div>
+          <div>
+            <SectionTitle text="Infomercial" classes="pt-10 pb-10" />
+            <VideoGroup id="-2lcjZsz7Zs" title="KCC 30mph" />
           </div>
         </div>
       </ContainerDefault>
