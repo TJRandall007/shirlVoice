@@ -37,7 +37,7 @@ const SectionCopy = ({ title, left, children, download }) => (
   </SectionGridCopy>
 );
 
-const Section = ({ title, img, src, left, children }) => (
+export const Section = ({ title, img, src, left, children }) => (
   <section>
     <SectionGrid className="lg:py-16">
       {left && (

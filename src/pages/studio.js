@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { RecoilRoot } from "recoil";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
@@ -7,6 +8,8 @@ import Lead from "../components/lead/lead";
 import { Banner } from "../components/roadblock/banner";
 import { Contact } from "../components/roadblock/contact";
 import { ContainerDefault } from "../components/container/container";
+
+import { Section } from "./audio-samples";
 
 import { accent } from "../theme";
 
@@ -57,7 +60,6 @@ const Lists = () => {
     "Experienced Female Voiceover",
     "Skype, Cleanfeed",
     "Source Connect, ipDTL",
-    "Broadcast quality studio",
     "British RP",
     "Friendly & Reliable",
   ];
@@ -73,22 +75,37 @@ const Lists = () => {
 };
 
 const Studio = ({ location }) => (
-  <Layout location={location}>
-    <SEO title="Studio" />
-    <Lead title="Shirlie Randall — Studio" />
-    <StudioContainer className="py-16">
-      <ContainerDefault>
-        <Intro />
-        <Lists />
-      </ContainerDefault>
-      <Banner
-        text="A true professional voiceover - terrific fun and brilliant to work with"
-        name="Ed Scott"
-        company="Executive Producer, Universal Music UK"
-      />
-      <Contact />
-    </StudioContainer>
-  </Layout>
+  <RecoilRoot>
+    <Layout location={location}>
+      <SEO title="Studio" />
+      <Lead title="Shirlie Randall — Studio" />
+      <StudioContainer className="py-16">
+        <ContainerDefault>
+          <Intro />
+
+          <Section
+            title="Radio Promo"
+            left={true}
+            img="https://storage.googleapis.com/shirl-voice/images/players/Shirlie-Randall-Studio.jpg"
+            src="https://storage.googleapis.com/shirl-voice/audio/Shirlie_Randall-Signal_1_Covid_Community_Promo.wav"
+          >
+            <p>
+              If you require a professional female voiceover who produces
+              quality audio then look no further. Here's an example of a Radio
+              Promo that has been recorded from my home studio.
+            </p>
+          </Section>
+          <Lists />
+        </ContainerDefault>
+        <Banner
+          text="A true professional voiceover - terrific fun and brilliant to work with"
+          name="Ed Scott"
+          company="Executive Producer, Universal Music UK"
+        />
+        <Contact />
+      </StudioContainer>
+    </Layout>
+  </RecoilRoot>
 );
 
 export default Studio;
