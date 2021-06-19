@@ -94,7 +94,8 @@ const About = ({ location }) => (
           <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
             <img
               className="shadow-2xl"
-              src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-young.jpg"
+              // src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-young.jpg"
+              src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-01.jpg"
               alt="Young Shirlie Randall"
             />
           </Parallax>
@@ -104,7 +105,8 @@ const About = ({ location }) => (
           <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
             <img
               className="shadow-2xl"
-              src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-heart.jpg"
+              // src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-heart.jpg"
+              src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-02.jpg"
               alt="Shirlie Randall voiceover for Heart FM"
             />
           </Parallax>
@@ -114,7 +116,8 @@ const About = ({ location }) => (
           <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
             <img
               className="shadow-2xl"
-              src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-smile.jpg"
+              // src="https://storage.googleapis.com/shirl-voice/images/photos/shirl-smile.jpg"
+              src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-03.jpg"
               alt="Shirlie Randall smiling"
             />
           </Parallax>
