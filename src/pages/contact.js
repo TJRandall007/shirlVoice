@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Widget } from "@typeform/embed-react";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
@@ -10,31 +10,6 @@ import { ContainerDefault } from "../components/container/container";
 import { accent } from "../theme";
 
 const Form = () => {
-  const form = function () {
-    var qs,
-      js,
-      q,
-      s,
-      d = document,
-      gi = d.getElementById,
-      ce = d.createElement,
-      gt = d.getElementsByTagName,
-      id = "typef_orm",
-      b = "https://embed.typeform.com/";
-    if (!gi.call(d, id)) {
-      js = ce.call(d, "script");
-      js.id = id;
-      js.src = b + "embed.js";
-      q = gt.call(d, "script")[0];
-      q.parentNode.insertBefore(js, q);
-    }
-  };
-
-  useEffect(() => {
-    console.log("USE EFFECT");
-    form();
-  });
-
   return (
     <div className="pb-12">
       <div
@@ -71,7 +46,13 @@ const Contact = ({ location }) => (
     <ContactContainer className="py-16">
       <ContainerDefault>
         <Intro />
-        <Form />
+        <div className="w-full h-64" style={{ height: "500px" }}>
+          <Widget
+            id="GGN6imCm"
+            style={{ width: "100%", height: "100%" }}
+            className="my-form"
+          />
+        </div>
       </ContainerDefault>
     </ContactContainer>
   </Layout>
