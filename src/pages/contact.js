@@ -30,7 +30,7 @@ const Intro = () => (
     </p>
 
     <p className="py-12 text-2xl">
-      <span className="px-2 font-semibold">07825 248481</span>
+      <span className="px-2 font-semibold">+44 (0) 7825 248481</span>
       <span className="italic select-none">or</span>
       <span className="px-2 font-semibold">
         hello<code>@</code>shirlierandall.com

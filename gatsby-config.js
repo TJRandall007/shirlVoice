@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ShirlVoice`,
+    title: `Shirlie Randall`,
     description: `Professional female voice over artist.`,
     author: `@shirlierandall`,
   },

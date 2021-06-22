@@ -45,10 +45,10 @@ const About = ({ location }) => (
             Cleanfeed.
           </p>
           <p>
-            I have incredible flexibility and the ability to give a fast
-            turnaround for your project. With excellent communication skills and
-            the ability to take direction, I’m renowned with producers as a
-            female voice over who can “nail a script” on the first take.
+            I have incredible flexibility and can provide a fast turnaround for
+            your project. With excellent communication skills and the ability to
+            take direction, I’m renowned with producers as a female voice over who
+            can “nail a script” on the first take.
           </p>
           <p>
             With a commercial voice that ranges from bright and upbeat to smooth
@@ -59,7 +59,7 @@ const About = ({ location }) => (
             refined and improved all the time, attending voice-over master
             classes and having ongoing professional voice coaching with the
             world-renowned voice-over coach{" "}
-            <a href="https://braintracksaudio.com/">
+            <a href="https://braintracksaudio.com/" target="_blank">
               Nancy Wolfson at Braintracks Audio
             </a>
             .
@@ -74,7 +74,7 @@ const About = ({ location }) => (
           <p>
             Based in Los Angeles, California, he operates from his own top of
             the range studio. Feel free to check out his extraordinary gift at{" "}
-            <a href="http://www.davebethell.com/">davebethell.com</a>.
+            <a href="http://www.davebethell.com/" target="_blank">davebethell.com</a>.
           </p>
           <hr />
           <p>
@@ -85,7 +85,7 @@ const About = ({ location }) => (
             Beats Bakery is my very own music production library, with a track
             suited for your every need. Head over to listen to some of the
             amazing albums that can be featured on your next project at{" "}
-            <a href="https://beatsbakery.com/">beatsbakery.com</a>.
+            <a href="https://beatsbakery.com/" target="_blank">beatsbakery.com</a>.
           </p>
           <SignatureBottom />
         </Copy>

@@ -98,27 +98,27 @@ export const Contact = () => (
       </Copy>
       <ul className="flex justify-center py-8">
         <Icon>
-          <a href="https://twitter.com/shirlierandall">
+          <a href="https://twitter.com/shirlierandall" target="_blank">
             <Twitter />
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.instagram.com/shirlierandall/">
+          <a href="https://www.instagram.com/shirlierandall/" target="_blank">
             <Instagram />
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.facebook.com/shirlie.randall/">
+          <a href="https://www.facebook.com/shirlie.randall/" target="_blank">
             <Facebook />
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.linkedin.com/in/shirlie-randall-4b4a9565/">
+          <a href="https://www.linkedin.com/in/shirlie-randall-4b4a9565/" target="_blank">
             <LinkedIn />
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.youtube.com/channel/UCK-jWHW4pfzZSJXM6IbTQMw">
+          <a href="https://www.youtube.com/channel/UCK-jWHW4pfzZSJXM6IbTQMw" target="_blank">
             <YouTube />
           </a>
         </Icon>
