@@ -33,6 +33,8 @@ export default function Player(props) {
   function handleTimeUpdate() {
     const audio = audioRef.current;
 
+    if (!audio) return;
+
     setTime(timeString(audio.currentTime));
 
     if (audio.duration) {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 
@@ -22,29 +22,55 @@ const clients = [
   { name: "ASDA", fileName: "asda" },
 ];
 
+function ClientInner({ name, fileName, i }) {
+  return (
+    <ClientsBlock
+      style={{
+        backgroundImage: `url("https://storage.googleapis.com/shirl-voice/images/clients/${fileName}.svg")`,
+      }}
+      className="flex items-center justify-center h-24 lg:h-52"
+    >
+      {name}
+    </ClientsBlock>
+  );
+}
+
 function Client({ name, fileName, i }) {
+  const [resi, setResi] = useState(3);
+
+  function handleResize() {
+    const w = document.documentElement.clientWidth;
+
+    const size = w > 768 ? 2 : w > 375 ? 1 : 0;
+
+    setResi(size);
+  }
+
+  useEffect(() => {
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const y = 40;
 
-  return (
+  return resi > 0 ? (
     <Parallax y={i % 2 ? [y, -y] : [-y, y]} styleOuter={{ flex: 1 }}>
-      <ClientsBlock
-        style={{
-          backgroundImage: `url("https://storage.googleapis.com/shirl-voice/images/clients/${fileName}.svg")`,
-        }}
-        className="h-12 flex items-center justify-center"
-      >
-        {name}
-      </ClientsBlock>
+      <ClientInner name={name} fileName={fileName} i={i} />
     </Parallax>
+  ) : (
+    <ClientInner name={name} fileName={fileName} i={i} />
   );
 }
 
 export default function Clients(props) {
   return (
-    <ClientsContainer className="py-32">
+    <ClientsContainer className="py-10 lg:py-32">
       <ContainerDefault>
-        <SectionTitle classes="pb-16" text="Clients I've worked with" />
-        <ClientsGrid className="grid grid-flow-col grid-cols-4 grid-rows-3 gap-x-4">
+        <SectionTitle classes="pb-6 md:pb-16" text="Clients I've worked with" />
+        <ClientsGrid className="grid grid-flow-col grid-rows-6 gap-x-4 lg:grid-rows-3">
           {clients.map(({ name, fileName }, index) => (
             <Client key={index} i={index} name={name} fileName={fileName} />
           ))}
@@ -61,7 +87,6 @@ const ClientsContainer = styled.section`
 const ClientsGrid = styled.div``;
 
 const ClientsBlock = styled.span`
-  height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

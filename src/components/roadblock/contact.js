@@ -31,7 +31,7 @@ const Instagram = () => (
   >
     <path d="M33.1 16.2h33.8c9.3 0 16.9 7.5 16.9 16.9v33.8c0 9.3-7.5 16.9-16.9 16.9H33.1c-9.3 0-16.9-7.5-16.9-16.9V33.1c0-9.3 7.6-16.9 16.9-16.9z" />
     <path d="M68.6 30.2c-.7 0-1.3.6-1.3 1.3 0 .7.6 1.3 1.3 1.3.7 0 1.3-.6 1.3-1.3-.1-.8-.6-1.3-1.3-1.3" />
-    <circle class="st0" cx="50" cy="50" r="13.5" />
+    <circle className="st0" cx="50" cy="50" r="13.5" />
   </svg>
 );
 
@@ -47,7 +47,7 @@ const Facebook = () => (
     xmlSpace="preserve"
   >
     <path
-      class="st0"
+      className="st0"
       d="M41.3 47.4h17.4M58.7 33h-3c-4.7 0-8.5 3.8-8.5 8.5V67"
     />
     <circle cx="50" cy="50" r="37.5" />
@@ -88,10 +88,10 @@ const YouTube = () => (
 );
 
 export const Contact = () => (
-  <ContactContainer className="lg:py-32">
+  <ContactContainer className="pt-12 pb-6 lg:py-32">
     <ContainerDefault>
       <SectionTitle text="Get in touch" />
-      <Copy className="lg:text-4xl">
+      <Copy className="text-xl lg:text-4xl">
         +44 (0) 7825 248 481 <Divider>/</Divider> hello<Mask>@</Mask>
         shirlierandall
         <Mask>.com</Mask>
@@ -113,12 +113,18 @@ export const Contact = () => (
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.linkedin.com/in/shirlie-randall-4b4a9565/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/shirlie-randall-4b4a9565/"
+            target="_blank"
+          >
             <LinkedIn />
           </a>
         </Icon>
         <Icon>
-          <a href="https://www.youtube.com/channel/UCK-jWHW4pfzZSJXM6IbTQMw" target="_blank">
+          <a
+            href="https://www.youtube.com/channel/UCK-jWHW4pfzZSJXM6IbTQMw"
+            target="_blank"
+          >
             <YouTube />
           </a>
         </Icon>

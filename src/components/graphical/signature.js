@@ -28,6 +28,14 @@ export function SignatureBottom() {
   );
 }
 
+export function SignatureMobile() {
+  return (
+    <SignatureMobile_>
+      <SignatureSVG />
+    </SignatureMobile_>
+  );
+}
+
 const Signature_ = styled.span`
   width: 240px;
   transform: rotate(-10deg);
@@ -43,4 +51,9 @@ const Signature_ = styled.span`
 
 const SignatureBottom_ = styled(Signature_)`
   bottom: 0px;
+`;
+
+const SignatureMobile_ = styled(Signature_)`
+  opacity: 0.4;
+  bottom: 15%;
 `;

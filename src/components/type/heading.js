@@ -10,7 +10,7 @@ export function MainTitle({ text }) {
 export function SectionTitle({ classes, text }) {
   return (
     <Section
-      className={`lg:text-5xl md:text-4xl text-3xl text-center ${
+      className={`text-3xl text-center md:text-4xl lg:text-5xl ${
         classes ? classes : ""
       }`}
     >

@@ -23,7 +23,7 @@ const Layout = ({ location, children }) => {
 
   return (
     <ParallaxProvider>
-      <LayoutWrapper style={{ margin: "16px", position: "relative" }}>
+      <LayoutWrapper className="m-2 lg:m-4" style={{ position: "relative" }}>
         <Header
           siteTitle={data.site.siteMetadata?.title || `Title`}
           abs={location.pathname === "/"}

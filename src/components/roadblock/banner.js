@@ -6,15 +6,15 @@ import { ContainerDefault } from "../container/container";
 import { accent } from "../../theme";
 
 export const Banner = ({ text, name, company }) => (
-  <BannerContainer className="lg:pt-32 lg:pb-24">
+  <BannerContainer className="py-12 lg:pt-32 lg:pb-24">
     <ContainerDefault>
       <BannerContainerInner>
-        <BannerQuote className="lg:text-5xl lg:px-32">
+        <BannerQuote className="text-2xl lg:text-5xl lg:px-32">
           <BannerMark>"</BannerMark>
           <BannerText>{text}</BannerText>
           <BannerMark>"</BannerMark>
         </BannerQuote>
-        <BannerFooter className="lg:px-64 pt-8">
+        <BannerFooter className="text-center md:text-right lg:px-64 pt-8">
           –{" "}
           <BannerCite>
             <strong>{name}</strong>, {company}
@@ -49,7 +49,6 @@ const BannerText = styled.span`
 
 const BannerFooter = styled.footer`
   color: white;
-  text-align: right;
 `;
 
 const BannerCite = styled.cite`

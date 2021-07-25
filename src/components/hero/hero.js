@@ -1,28 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { ContainerDefault } from "../container/container";
-import { Action } from "../action/action";
+import { Action, ActionHeroMobile } from "../action/action";
 import { MainTitle } from "../type/heading";
 import { background, type } from "../../theme";
 
 export default function Hero(props) {
+  const [resi, setResi] = useState(3);
+
+  function handleResize() {
+    const w = document.documentElement.clientWidth;
+
+    const size = w > 768 ? 2 : w > 375 ? 1 : 0;
+
+    setResi(size);
+  }
+
+  useEffect(() => {
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <HeroContainer className="hero">
       <ContainerDefault>
-        <div className="xl:py-64 lg:py-52 md:py-48 relative">
+        <div className="relative pt-28 pb-32 md:py-48 lg:py-52 xl:py-64">
           <Headers>
             <MainTitle text={props.lead} />
-            <Sub className="lg:text-2xl md:text-xl pb-12">{props.sub}</Sub>
+            <Sub className="lg:text-2xl lg:w-auto md:text-xl pb-12 w-40">
+              {props.sub}
+            </Sub>
           </Headers>
 
-          <Action to="/audio-samples/" value="Listen to showreels" />
-          <ImageContainer>
-            <img
-              src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
-              alt="Shirlie Randall"
+          {resi > 0 ? (
+            <Action to="/audio-samples/" value="Listen to showreels" />
+          ) : (
+            <ActionHeroMobile
+              to="/audio-samples/"
+              value="Listen to showreels"
             />
-          </ImageContainer>
+          )}
+
+          {resi > 0 ? (
+            <ImageContainer>
+              <img
+                className="w-2/3"
+                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
+                alt="Shirlie Randall"
+              />
+            </ImageContainer>
+          ) : (
+            <ImageContainerMobile>
+              <img
+                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
+                alt="Shirlie Randall"
+              />
+            </ImageContainerMobile>
+          )}
         </div>
       </ContainerDefault>
     </HeroContainer>
@@ -54,7 +92,21 @@ const ImageContainer = styled.div`
 
   img {
     height: auto;
-    width: 70%;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+`;
+
+const ImageContainerMobile = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: -49%;
+  z-index: 1;
+
+  img {
+    width: 370px;
+    height: auto;
     margin: 0;
     padding: 0;
     float: right;
