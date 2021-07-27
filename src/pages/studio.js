@@ -66,7 +66,7 @@ const Lists = () => {
 
   return (
     <StudioLists className="lg:w-8/12 lg:text-lg mx-auto">
-      <div className="grid grid-cols-2 gap-4 py-12 pb-32">
+      <div className="grid gap-8 py-12 md:pb-32 text-center md:gap-4 md:text-left md:grid-cols-2">
         <List title={"Studio Facilities"} items={left} />
         <List title={"Professional Voice over"} items={right} />
       </div>
@@ -79,7 +79,7 @@ const Studio = ({ location }) => (
     <Layout location={location}>
       <SEO title="Studio" />
       <Lead title="Shirlie Randall — Studio" />
-      <StudioContainer className="py-16">
+      <StudioContainer className="pt-8 lg:py-16">
         <ContainerDefault>
           <Intro />
 

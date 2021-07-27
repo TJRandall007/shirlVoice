@@ -23,14 +23,16 @@ const Form = () => {
 
 const Intro = () => (
   <ContactIntro className="lg:w-8/12 lg:text-lg m-auto">
-    <p className="px-28">
+    <p className="md:px-28">
       If you need a professional voice over artist for your project then look no
       further. Call or email me directly, message me or use the contact form
       below.
     </p>
 
-    <p className="py-12 text-2xl">
-      <span className="px-2 font-semibold">+44 (0) 7825 248481</span>
+    <p className="pt-8 text-xl md:text-2xl md:pt-12">
+      <span className="px-2 font-semibold block md:inline">
+        +44 (0) 7825 248481
+      </span>
       <span className="italic select-none">or</span>
       <span className="px-2 font-semibold">
         hello<code>@</code>shirlierandall.com
@@ -43,7 +45,7 @@ const Contact = ({ location }) => (
   <Layout location={location}>
     <SEO title="Contact" />
     <Lead title="Shirlie Randall — Contact" />
-    <ContactContainer className="py-16">
+    <ContactContainer className="pt-8 lg:py-16">
       <ContainerDefault>
         <Intro />
         <div className="w-full h-64" style={{ height: "500px" }}>
@@ -77,6 +79,5 @@ const ContactIntro = styled.div`
 
   p {
     text-align: center;
-    padding-bottom: 1em;
   }
 `;

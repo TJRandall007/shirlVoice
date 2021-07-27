@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Parallax } from "react-scroll-parallax";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
@@ -51,13 +50,13 @@ const Showreels = ({ location }) => (
   <Layout location={location}>
     <SEO title="Video Samples" />
     <Lead title="Shirlie Randall — Video Samples" />
-    <ShowreelsContainer className="py-16">
+    <ShowreelsContainer className="pt-8 lg:py-16">
       <ContainerDefault>
         <Intro />
         <div className="pt-24">
           <SectionTitle text="TV Advertising" classes="pb-10" />
 
-          <div className=" grid grid-cols-3 gap-8 pb-16">
+          <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="brjGZcMftqg" title="Crosse and Blackwell" />
             <VideoGroup id="gSGrPSTgAgk" title="Selfie Mic" />
             <VideoGroup id="P0lDmfj9Xis" title="Lotto Go" />
@@ -69,14 +68,14 @@ const Showreels = ({ location }) => (
 
         <div>
           <SectionTitle text="Online Videos" classes="pt-10 pb-10" />
-          <div className="grid grid-cols-3 gap-8 pb-16">
+          <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="wd9O2YUmf4Q" title="Weight Watchers" />
             <VideoGroup id="bqpGmArQiL8" title="Nextdoor App" />
             <VideoGroup id="A0uVkz-jJN4" title="My Morrisons" />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 pb-16">
+        <div className="grid gap-8 pb-16 lg:grid-cols-3">
           <div>
             <SectionTitle text="Continuity" classes="pt-10 pb-10" />
             <VideoGroup id="Ghsi0O64gzM" title="Paddington 2" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RecoilRoot } from "recoil";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
@@ -15,13 +15,23 @@ import { SectionMinorTitle } from "../components/type/heading";
 
 import { accent } from "../theme";
 
-const SectionPlayer = ({ title, img, src }) => (
-  <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
+const SectionPlayer = ({ title, img, src, resi }) => {
+  if (resi > 0) {
+    return (
+      <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
+        <SectionGridPlayer>
+          <Player title={`${title} showreel`} src={src} image={img} />
+        </SectionGridPlayer>
+      </Parallax>
+    );
+  }
+
+  return (
     <SectionGridPlayer>
       <Player title={`${title} showreel`} src={src} image={img} />
     </SectionGridPlayer>
-  </Parallax>
-);
+  );
+};
 
 const SectionCopy = ({ title, left, children, download }) => (
   <SectionGridCopy className="flex align-center">
@@ -37,34 +47,58 @@ const SectionCopy = ({ title, left, children, download }) => (
   </SectionGridCopy>
 );
 
-export const Section = ({ title, img, src, left, children }) => (
-  <section>
-    <SectionGrid className="lg:py-16">
-      {left && (
-        <>
-          <SectionPlayer title={title} img={img} src={src} />
-          <SectionCopy
-            title={title}
-            left={left}
-            children={children}
-            download={src}
-          />
-        </>
-      )}
-      {!left && (
-        <>
-          <SectionCopy
-            title={title}
-            left={left}
-            children={children}
-            download={src}
-          />
-          <SectionPlayer title={title} img={img} src={src} />
-        </>
-      )}
-    </SectionGrid>
-  </section>
-);
+export const Section = ({ title, img, src, left, children }) => {
+  const [resi, setResi] = useState(3);
+
+  function handleResize() {
+    const w = document.documentElement.clientWidth;
+
+    const size = w > 768 ? 2 : w > 375 ? 1 : 0;
+
+    setResi(size);
+  }
+
+  useEffect(() => {
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <section>
+      <SectionGrid className="lg:py-16 lg:flex">
+        {left && (
+          <>
+            <SectionPlayer title={title} img={img} src={src} resi={resi} />
+            {resi > 0 && (
+              <SectionCopy
+                title={title}
+                left={left}
+                children={children}
+                download={src}
+              />
+            )}
+          </>
+        )}
+        {!left && (
+          <>
+            {resi > 0 && (
+              <SectionCopy
+                title={title}
+                left={left}
+                children={children}
+                download={src}
+              />
+            )}
+            <SectionPlayer title={title} img={img} src={src} resi={resi} />
+          </>
+        )}
+      </SectionGrid>
+    </section>
+  );
+};
 
 const Intro = () => (
   <ShowreelsIntro className="lg:w-8/12 lg:text-lg m-auto">
@@ -100,7 +134,7 @@ const Showreels = ({ location }) => (
     <RecoilRoot>
       <SEO title="Audio Samples" />
       <Lead title="Shirlie Randall — Audio Samples" />
-      <ShowreelsContainer className="py-16">
+      <ShowreelsContainer className="pt-8 lg:py-16">
         <ContainerDefault>
           <Intro />
 
@@ -220,9 +254,7 @@ const ShowreelsIntro = styled.div`
   }
 `;
 
-const SectionGrid = styled.div`
-  display: flex;
-`;
+const SectionGrid = styled.div``;
 
 const SectionGridCopy = styled.div`
   flex: 2;
