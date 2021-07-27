@@ -65,6 +65,13 @@ export default function Player(props) {
   function handleButtonPress() {
     setInteracted(true);
     setPlaying(!playing);
+
+    const audio = audioRef.current;
+
+    const p = !playing;
+
+    if (p) audio.play();
+    else audio.pause();
   }
 
   function handleVolumePress(index) {
@@ -87,8 +94,7 @@ export default function Player(props) {
 
     const audio = audioRef.current;
 
-    if (playing) audio.play();
-    else audio.pause();
+    if (!playing) audio.pause();
   }, [playing]);
 
   useEffect(() => {
