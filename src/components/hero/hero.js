@@ -6,6 +6,9 @@ import { Action, ActionHeroMobile } from "../action/action";
 import { MainTitle } from "../type/heading";
 import { background, type } from "../../theme";
 
+// Images
+import SmileImage from "../../images/smile.jpeg";
+
 export default function Hero(props) {
   const [resi, setResi] = useState(3);
 
@@ -47,25 +50,15 @@ export default function Hero(props) {
 
           {resi > 1 ? (
             <ImageContainer>
-              <img
-                className="w-2/3"
-                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
-                alt="Shirlie Randall"
-              />
+              <img className="w-2/3" src={SmileImage} alt="Shirlie Randall" />
             </ImageContainer>
           ) : resi > 0 ? (
             <ImageContainerTablet>
-              <img
-                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
-                alt="Shirlie Randall"
-              />
+              <img src={SmileImage} alt="Shirlie Randall" />
             </ImageContainerTablet>
           ) : (
             <ImageContainerMobile>
-              <img
-                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
-                alt="Shirlie Randall"
-              />
+              <img src={SmileImage} alt="Shirlie Randall" />
             </ImageContainerMobile>
           )}
         </div>

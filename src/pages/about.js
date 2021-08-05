@@ -12,6 +12,11 @@ import { SignatureBottom } from "../components/graphical/signature";
 
 import { accent, type } from "../theme";
 
+// Images
+import About1Image from "../images/about1.jpeg";
+import About2Image from "../images/about2.jpeg";
+import About3Image from "../images/about3.jpeg";
+
 const FloatImage1 = ({ resi }) => {
   if (resi > 1) {
     return (
@@ -19,7 +24,7 @@ const FloatImage1 = ({ resi }) => {
         <Float1 className="my-12 md:my-0 md:w-4/5 md:absolute">
           <img
             className="shadow-2xl"
-            src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-01.jpg"
+            src={About1Image}
             alt="Young Shirlie Randall"
           />
         </Float1>
@@ -29,11 +34,7 @@ const FloatImage1 = ({ resi }) => {
 
   return (
     <Float1 className="my-12 md:w-80 md:mx-auto">
-      <img
-        className=""
-        src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-01.jpg"
-        alt="Young Shirlie Randall"
-      />
+      <img className="" src={About1Image} alt="Young Shirlie Randall" />
     </Float1>
   );
 };
@@ -45,7 +46,7 @@ const FloatImage2 = ({ resi }) => {
         <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
           <img
             className="shadow-2xl"
-            src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-02.jpg"
+            src={About2Image}
             alt="Shirlie Randall voiceover for Heart FM"
           />
         </Parallax>
@@ -57,7 +58,7 @@ const FloatImage2 = ({ resi }) => {
     <Float2 className="my-12 md:w-80 md:mx-auto">
       <img
         className=""
-        src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-02.jpg"
+        src={About2Image}
         alt="Shirlie Randall voiceover for Heart FM"
       />
     </Float2>
@@ -71,7 +72,7 @@ const FloatImage3 = ({ resi }) => {
         <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
           <img
             className="shadow-2xl"
-            src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-03.jpg"
+            src={About3Image}
             alt="Shirlie Randall smiling"
           />
         </Parallax>
@@ -81,11 +82,7 @@ const FloatImage3 = ({ resi }) => {
 
   return (
     <Float3 className="my-12 md:w-80 md:mx-auto">
-      <img
-        className=""
-        src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-03.jpg"
-        alt="Shirlie Randall smiling"
-      />
+      <img className="" src={About3Image} alt="Shirlie Randall smiling" />
     </Float3>
   );
 };

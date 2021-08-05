@@ -15,6 +15,22 @@ import { SectionMinorTitle } from "../components/type/heading";
 
 import { accent } from "../theme";
 
+// Audio
+import CommercialAudio from "../audio/commercial.mp3";
+import ContinuityAudio from "../audio/continuity.mp3";
+import ImagingAudio from "../audio/imaging.mp3";
+import JingleAudio from "../audio/jingle.mp3";
+import NarrationAudio from "../audio/narration.mp3";
+import SingingAudio from "../audio/singing.mp3";
+
+// Images
+import CommercialImage from "../images/commercial.jpeg";
+import ImagingImage from "../images/imaging.jpeg";
+import CorporateImage from "../images/corporate.jpeg";
+import ContinuityImage from "../images/continuity.jpeg";
+import JinglesImage from "../images/jingles.jpeg";
+import SingingImage from "../images/singing.jpeg";
+
 const SectionPlayer = ({ title, img, src, resi }) => {
   if (resi > 0) {
     return (
@@ -146,8 +162,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Commercial"
             left={true}
-            img="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
-            src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
+            img={CommercialImage}
+            src={CommercialAudio}
           >
             <p>
               Having voiced countless commercials, I can guarantee seamless
@@ -160,8 +176,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Imaging"
             left={false}
-            img="https://storage.googleapis.com/shirl-voice/images/players/imaging.jpg"
-            src="https://storage.googleapis.com/shirl-voice/audio/Imaging_Demo_Shirlie_Randall.mp3"
+            img={ImagingImage}
+            src={ImagingAudio}
           >
             <p>
               Currently the female imaging voice for Virgin Radio and KMFM, once
@@ -175,8 +191,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Corporate"
             left={true}
-            img="https://images.pexels.com/photos/1337753/pexels-photo-1337753.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            src="https://storage.googleapis.com/shirl-voice/audio/Narration_Demo_Shirlie_Randall.mp3"
+            img={CorporateImage}
+            src={NarrationAudio}
           >
             <p>
               My voice can be naturally warm and friendly for narration, but I
@@ -188,8 +204,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Continuity"
             left={false}
-            img="https://storage.googleapis.com/shirl-voice/images/players/continuity.jpg"
-            src="https://storage.googleapis.com/shirl-voice/audio/Continuity_Demo_Shirlie_Randall%20.mp3"
+            img={ContinuityImage}
+            src={ContinuityAudio}
           >
             <p>
               With a natural, warm and friendly tone and an ability for
@@ -201,8 +217,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Vocals (Jingles)"
             left={true}
-            img="https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            src="https://storage.googleapis.com/shirl-voice/audio/Jingle_Demo_Shirlie_Randall.mp3"
+            img={JinglesImage}
+            src={JingleAudio}
           >
             <p>
               With my singing experience and professional training, I can
@@ -214,8 +230,8 @@ const Showreels = ({ location }) => (
           <Section
             title="Singing"
             left={false}
-            img="https://storage.googleapis.com/shirl-voice/images/players/singing.jpg"
-            src="https://storage.googleapis.com/shirl-voice/audio/Singing_Demo_Shirlie_Randall.mp3"
+            img={SingingImage}
+            src={SingingAudio}
           >
             <p>
               From being classically trained since the age of 9 to featuring on

@@ -5,28 +5,40 @@ import { Parallax } from "react-scroll-parallax";
 import { ContainerDefault } from "../container/container";
 import { SectionTitle } from "../type/heading";
 
-import {} from "../../theme";
+// Images
+import Asda from "../../images/clients/asda.svg";
+import Bauer from "../../images/clients/bauer.svg";
+import Coop from "../../images/clients/coop.svg";
+import Disney from "../../images/clients/disney.svg";
+import Morrisons from "../../images/clients/morrisons.svg";
+import Nhs from "../../images/clients/nhs.svg";
+import Playmobil from "../../images/clients/playmobil.svg";
+import Sky from "../../images/clients/sky.svg";
+import Tui from "../../images/clients/tui.svg";
+import Unilever from "../../images/clients/unilever.svg";
+import Virgin from "../../images/clients/virgin-radio.svg";
+import WW from "../../images/clients/weight-watchers.svg";
 
 const clients = [
-  { name: "Disney", fileName: "disney" },
-  { name: "Weight Watchers", fileName: "weight-watchers" },
-  { name: "Unilever", fileName: "unilever" },
-  { name: "Playmobil", fileName: "playmobil" },
-  { name: "Co-op", fileName: "coop" },
-  { name: "Tui", fileName: "tui" },
-  { name: "Sky", fileName: "sky" },
-  { name: "Morrisons", fileName: "morrisons" },
-  { name: "Bauer Media", fileName: "bauer" },
-  { name: "NHS", fileName: "nhs" },
-  { name: "Virgin Radio", fileName: "virgin-radio" },
-  { name: "ASDA", fileName: "asda" },
+  { name: "Disney", fileName: Disney },
+  { name: "Weight Watchers", fileName: WW },
+  { name: "Unilever", fileName: Unilever },
+  { name: "Playmobil", fileName: Playmobil },
+  { name: "Co-op", fileName: Coop },
+  { name: "Tui", fileName: Tui },
+  { name: "Sky", fileName: Sky },
+  { name: "Morrisons", fileName: Morrisons },
+  { name: "Bauer Media", fileName: Bauer },
+  { name: "NHS", fileName: Nhs },
+  { name: "Virgin Radio", fileName: Virgin },
+  { name: "ASDA", fileName: Asda },
 ];
 
 function ClientInner({ name, fileName, i }) {
   return (
     <ClientsBlock
       style={{
-        backgroundImage: `url("https://storage.googleapis.com/shirl-voice/images/clients/${fileName}.svg")`,
+        backgroundImage: `url("${fileName}")`,
       }}
       className="flex items-center justify-center h-24 lg:h-52"
     >

@@ -7,7 +7,15 @@ import { Action, ActionSecondary } from "../action/action";
 import Player from "../player/player";
 import { Signature, SignatureMobile } from "../graphical/signature";
 
-import { accent, font } from "../../theme";
+import { font } from "../../theme";
+
+// Audio
+import CommercialAudio from "../../audio/commercial.mp3";
+import ImagingAudio from "../../audio/imaging.mp3";
+
+// Images
+import CommercialImage from "../../images/commercial.jpeg";
+import ImagingImage from "../../images/imaging.jpeg";
 
 export function IntroComponentMobile() {
   return (
@@ -40,9 +48,8 @@ export function IntroComponentMobile() {
           <Box>
             <Player
               title="Commercial showreel"
-              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-              image="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
-              src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
+              image={CommercialImage}
+              src={CommercialAudio}
             />
           </Box>
         </IntroGridMobile>
@@ -60,9 +67,8 @@ export function IntroComponentTablet() {
             <Box>
               <Player
                 title="Commercial showreel"
-                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                image="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
-                src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
+                image={CommercialImage}
+                src={CommercialAudio}
               />
             </Box>
           </Parallax>
@@ -101,9 +107,8 @@ export function IntroComponent() {
             <Box>
               <Player
                 title="Commercial showreel"
-                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                image="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
-                src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
+                image={CommercialImage}
+                src={CommercialAudio}
               />
             </Box>
           </Parallax>
@@ -139,9 +144,8 @@ export function IntroComponent() {
             <Box>
               <Player
                 title="Imaging showreel"
-                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                image="https://storage.googleapis.com/shirl-voice/images/players/imaging.jpg"
-                src="https://storage.googleapis.com/shirl-voice/audio/Imaging_Demo_Shirlie_Randall.mp3"
+                image={ImagingImage}
+                src={ImagingAudio}
               />
             </Box>
           </Parallax>

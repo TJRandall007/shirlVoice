@@ -13,6 +13,12 @@ import { Section } from "./audio-samples";
 
 import { accent } from "../theme";
 
+// Audio
+import RadioAudio from "../audio/radio.wav";
+
+// Images
+import StudioImage from "../images/studio.jpeg";
+
 const Intro = () => (
   <StudioIntro className="lg:w-8/12 lg:text-lg m-auto">
     <p>
@@ -86,8 +92,8 @@ const Studio = ({ location }) => (
           <Section
             title="Radio Promo"
             left={true}
-            img="https://storage.googleapis.com/shirl-voice/images/players/Shirlie-Randall-Studio.jpg"
-            src="https://storage.googleapis.com/shirl-voice/audio/Shirlie_Randall-Signal_1_Covid_Community_Promo.wav"
+            img={StudioImage}
+            src={RadioAudio}
           >
             <p>
               If you require a professional female voiceover who produces
