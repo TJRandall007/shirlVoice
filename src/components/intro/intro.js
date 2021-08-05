@@ -161,7 +161,7 @@ export default function Intro() {
   function handleResize() {
     const w = document.documentElement.clientWidth;
 
-    const size = w > 768 ? 2 : w > 414 ? 1 : 0;
+    const size = w > 810 ? 2 : w > 414 ? 1 : 0;
 
     setResi(size);
   }
