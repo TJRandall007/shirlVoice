@@ -51,6 +51,47 @@ export function IntroComponentMobile() {
   );
 }
 
+export function IntroComponentTablet() {
+  return (
+    <IntroContainer>
+      <ContainerDefault>
+        <IntroGrid className="flex gap-x-4 py-16">
+          <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
+            <Box>
+              <Player
+                title="Commercial showreel"
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                image="https://storage.googleapis.com/shirl-voice/images/players/commercial.jpg"
+                src="https://storage.googleapis.com/shirl-voice/audio/Commercial_Demo_Shirlie_Randall_MAIN.mp3"
+              />
+            </Box>
+          </Parallax>
+
+          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
+            <IntroCard style={{ height: "375px" }} className="p-8">
+              <h2>About me</h2>
+              <p>
+                I’m Shirlie Randall, and have been the voice for numerous brands
+                and projects for over 20 years! I can adapt my voice to whatever
+                style your project requires, from bright and upbeat to smooth
+                and sultry or natural and warm to cool and fresh, plus many
+                more.
+              </p>
+
+              <Signature />
+
+              <Actions className="px-8 pb-10">
+                <Action to="contact" value="Get in touch" />
+                <ActionSecondary to="about" value="Read more" />
+              </Actions>
+            </IntroCard>
+          </Parallax>
+        </IntroGrid>
+      </ContainerDefault>
+    </IntroContainer>
+  );
+}
+
 export function IntroComponent() {
   return (
     <IntroContainer>
@@ -129,7 +170,13 @@ export default function Intro() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return resi > 0 ? <IntroComponent /> : <IntroComponentMobile />;
+  return resi > 1 ? (
+    <IntroComponent />
+  ) : resi > 0 ? (
+    <IntroComponentTablet />
+  ) : (
+    <IntroComponentMobile />
+  );
 }
 
 const IntroContainer = styled.div`

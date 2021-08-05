@@ -66,7 +66,7 @@ const Lists = () => {
 
   return (
     <StudioLists className="lg:w-8/12 lg:text-lg mx-auto">
-      <div className="grid gap-8 py-12 md:pb-32 text-center md:gap-4 md:text-left md:grid-cols-2">
+      <div className="grid gap-8 py-12 md:pb-32 text-center md:gap-4 lg:text-left md:grid-cols-2">
         <List title={"Studio Facilities"} items={left} />
         <List title={"Professional Voice over"} items={right} />
       </div>

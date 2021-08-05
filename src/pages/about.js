@@ -13,7 +13,7 @@ import { SignatureBottom } from "../components/graphical/signature";
 import { accent, type } from "../theme";
 
 const FloatImage1 = ({ resi }) => {
-  if (resi > 0) {
+  if (resi > 1) {
     return (
       <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
         <Float1 className="my-12 md:my-0 md:w-4/5 md:absolute">
@@ -28,7 +28,7 @@ const FloatImage1 = ({ resi }) => {
   }
 
   return (
-    <Float1 className="my-12 md:my-0 md:w-4/5 md:absolute">
+    <Float1 className="my-12 md:w-80 md:mx-auto">
       <img
         className=""
         src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-01.jpg"
@@ -39,7 +39,7 @@ const FloatImage1 = ({ resi }) => {
 };
 
 const FloatImage2 = ({ resi }) => {
-  if (resi > 0) {
+  if (resi > 1) {
     return (
       <Float2 className="my-12 md:my-0 md:w-4/5 md:absolute">
         <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
@@ -54,7 +54,7 @@ const FloatImage2 = ({ resi }) => {
   }
 
   return (
-    <Float2 className="my-12 md:my-0 md:w-4/5 md:absolute">
+    <Float2 className="my-12 md:w-80 md:mx-auto">
       <img
         className=""
         src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-02.jpg"
@@ -65,7 +65,7 @@ const FloatImage2 = ({ resi }) => {
 };
 
 const FloatImage3 = ({ resi }) => {
-  if (resi > 0) {
+  if (resi > 1) {
     return (
       <Float3 className="my-12 md:my-0 md:w-4/5 md:absolute">
         <Parallax y={[-20, 20]} styleOuter={{ flex: 1 }}>
@@ -80,7 +80,7 @@ const FloatImage3 = ({ resi }) => {
   }
 
   return (
-    <Float3 className="my-12 md:my-0 md:w-4/5 md:absolute">
+    <Float3 className="my-12 md:w-80 md:mx-auto">
       <img
         className=""
         src="https://storage.googleapis.com/shirl-voice/images/photos/Shirlie-Randall-about-03.jpg"
@@ -115,7 +115,7 @@ const About = ({ location }) => {
       <Lead title="Shirlie Randall — About" />
       <AboutContainer className="pt-8 lg:py-16">
         <ContainerRelative>
-          <Copy className="m-auto pb-32 mb-32 md:w-1/2 lg:w-1/3">
+          <Copy className="m-auto pb-32 mb-32 md:w-3/4 lg:w-1/3">
             <p>
               <strong>
                 I’m Shirlie Randall: a professional British female voice-over

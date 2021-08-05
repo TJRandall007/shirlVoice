@@ -45,7 +45,7 @@ export default function Hero(props) {
             />
           )}
 
-          {resi > 0 ? (
+          {resi > 1 ? (
             <ImageContainer>
               <img
                 className="w-2/3"
@@ -53,6 +53,13 @@ export default function Hero(props) {
                 alt="Shirlie Randall"
               />
             </ImageContainer>
+          ) : resi > 0 ? (
+            <ImageContainerTablet>
+              <img
+                src="https://storage.googleapis.com/shirl-voice/images/hero/hero-smile.jpg"
+                alt="Shirlie Randall"
+              />
+            </ImageContainerTablet>
           ) : (
             <ImageContainerMobile>
               <img
@@ -91,6 +98,21 @@ const ImageContainer = styled.div`
   z-index: 1;
 
   img {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+`;
+
+const ImageContainerTablet = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+  z-index: 1;
+
+  img {
+    width: 520px;
     height: auto;
     margin: 0;
     padding: 0;

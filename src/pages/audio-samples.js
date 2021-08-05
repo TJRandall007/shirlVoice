@@ -33,8 +33,11 @@ const SectionPlayer = ({ title, img, src, resi }) => {
   );
 };
 
-const SectionCopy = ({ title, left, children, download }) => (
-  <SectionGridCopy className="flex align-center">
+const SectionCopy = ({ title, left, children, download, resi }) => (
+  <SectionGridCopy
+    style={{ flex: resi === 1 ? 1 : 2 }}
+    className="flex align-center"
+  >
     <div>
       <SectionMinorTitle classes="pb-6 text-left leading-3" text={title} />
       <div className={left ? "lg:pr-32" : "lg:pr-12"}>{children}</div>
@@ -68,7 +71,7 @@ export const Section = ({ title, img, src, left, children }) => {
 
   return (
     <section>
-      <SectionGrid className="lg:py-16 lg:flex">
+      <SectionGrid className="lg:py-16 md:flex">
         {left && (
           <>
             <SectionPlayer title={title} img={img} src={src} resi={resi} />
@@ -78,6 +81,7 @@ export const Section = ({ title, img, src, left, children }) => {
                 left={left}
                 children={children}
                 download={src}
+                resi={resi}
               />
             )}
           </>
@@ -90,6 +94,7 @@ export const Section = ({ title, img, src, left, children }) => {
                 left={left}
                 children={children}
                 download={src}
+                resi={resi}
               />
             )}
             <SectionPlayer title={title} img={img} src={src} resi={resi} />
@@ -257,7 +262,6 @@ const ShowreelsIntro = styled.div`
 const SectionGrid = styled.div``;
 
 const SectionGridCopy = styled.div`
-  flex: 2;
   align-items: center;
   justify-content: center;
   height: 400px;
