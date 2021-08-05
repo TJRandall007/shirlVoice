@@ -93,7 +93,7 @@ const About = ({ location }) => {
   function handleResize() {
     const w = document.documentElement.clientWidth;
 
-    const size = w > 768 ? 2 : w > 375 ? 1 : 0;
+    const size = w > 768 ? 2 : w > 414 ? 1 : 0;
 
     setResi(size);
   }
