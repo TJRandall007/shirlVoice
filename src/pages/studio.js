@@ -90,10 +90,11 @@ const Studio = ({ location }) => (
           <Intro />
 
           <Section
-            title="Radio Promo"
+            title="Signal 1 Radio Promo"
             left={true}
             img={StudioImage}
             src={RadioAudio}
+            dl="/audio/radio.wav"
           >
             <p>
               If you require a professional female voiceover who produces

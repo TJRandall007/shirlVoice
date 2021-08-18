@@ -58,7 +58,7 @@ const Section = styled.h2`
 const SectionMinor = styled(Section)`
   &:after {
     content: "";
-    width: 32px;
+    width: 20px;
     height: 4px;
     background: ${accent};
     display: block;

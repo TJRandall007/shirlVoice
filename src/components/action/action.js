@@ -5,6 +5,18 @@ import styled from "styled-components";
 import { accent, border, background, type } from "../../theme";
 
 export function Action({ to, value, classes, download = null }) {
+  if (download) {
+    return (
+      <ActionDefaultA
+        href={to}
+        className={`px-5 py-3 ${classes}`}
+        download={download}
+      >
+        {value}
+      </ActionDefaultA>
+    );
+  }
+
   return (
     <ActionDefault
       to={to}
@@ -17,6 +29,18 @@ export function Action({ to, value, classes, download = null }) {
 }
 
 export function ActionHeroMobile({ to, value, classes, download = null }) {
+  if (download) {
+    return (
+      <ActionHeroMobileBtnA
+        href={to}
+        className={`px-5 py-3 ${classes}`}
+        download={download}
+      >
+        {value}
+      </ActionHeroMobileBtnA>
+    );
+  }
+
   return (
     <ActionHeroMobileBtn
       to={to}
@@ -52,7 +76,27 @@ const ActionDefault = styled(Link)`
   }
 `;
 
+const ActionDefaultA = styled.a`
+  color: ${type.default};
+  border: 2px solid ${border.light};
+  border-radius: 200px;
+  font-weight: 400;
+  user-select: none;
+  position: relative;
+  z-index: 3;
+
+  &:hover {
+    background: ${accent};
+    border-color: ${accent};
+    cursor: pointer;
+  }
+`;
+
 const ActionHeroMobileBtn = styled(ActionDefault)`
+  background: ${background.light};
+`;
+
+const ActionHeroMobileBtnA = styled(ActionDefaultA)`
   background: ${background.light};
 `;
 

@@ -8,7 +8,7 @@ export default function Footer(props) {
   return (
     <FooterContainer className="py-4">
       <ContainerDefault>
-        © {new Date().getFullYear()} Shirl Voice
+        © {new Date().getFullYear()} Shirlie Randall
       </ContainerDefault>
     </FooterContainer>
   );
