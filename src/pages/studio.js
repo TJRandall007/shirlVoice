@@ -94,7 +94,7 @@ const Studio = ({ location }) => (
             left={true}
             img={StudioImage}
             src={RadioAudio}
-            dl="/audio/radio.wav"
+            dl="/audio/radio.wav.zip"
           >
             <p>
               If you require a professional female voiceover who produces
