@@ -95,6 +95,7 @@ const Studio = ({ location }) => (
             img={StudioImage}
             src={RadioAudio}
             dl="https://shirlierandall.b-cdn.net/radio.wav.zip"
+            showreel={false}
           >
             <p>
               If you require a professional female voiceover who produces

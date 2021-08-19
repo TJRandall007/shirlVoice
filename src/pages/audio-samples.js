@@ -31,12 +31,16 @@ import ContinuityImage from "../images/continuity.jpeg";
 import JinglesImage from "../images/jingles.jpeg";
 import SingingImage from "../images/singing.jpeg";
 
-const SectionPlayer = ({ title, img, src, resi }) => {
+const SectionPlayer = ({ title, img, src, resi, showreel }) => {
   if (resi > 0) {
     return (
       <Parallax y={[40, -40]} styleOuter={{ flex: 1 }}>
         <SectionGridPlayer>
-          <Player title={`${title} showreel`} src={src} image={img} />
+          <Player
+            title={`${title}${showreel ? " showreel" : ""}`}
+            src={src}
+            image={img}
+          />
         </SectionGridPlayer>
       </Parallax>
     );
@@ -67,7 +71,15 @@ const SectionCopy = ({ title, left, children, download, resi }) => (
   </SectionGridCopy>
 );
 
-export const Section = ({ title, img, src, left, dl, children }) => {
+export const Section = ({
+  title,
+  img,
+  src,
+  left,
+  dl,
+  showreel = true,
+  children,
+}) => {
   const [resi, setResi] = useState(3);
 
   function handleResize() {
@@ -91,7 +103,13 @@ export const Section = ({ title, img, src, left, dl, children }) => {
       <SectionGrid className="lg:py-16 md:flex">
         {left && (
           <>
-            <SectionPlayer title={title} img={img} src={src} resi={resi} />
+            <SectionPlayer
+              title={title}
+              img={img}
+              src={src}
+              resi={resi}
+              showreel={showreel}
+            />
             {resi > 0 && (
               <SectionCopy
                 title={title}
@@ -114,7 +132,13 @@ export const Section = ({ title, img, src, left, dl, children }) => {
                 resi={resi}
               />
             )}
-            <SectionPlayer title={title} img={img} src={src} resi={resi} />
+            <SectionPlayer
+              title={title}
+              img={img}
+              src={src}
+              resi={resi}
+              showreel={showreel}
+            />
           </>
         )}
       </SectionGrid>
