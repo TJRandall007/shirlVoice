@@ -165,7 +165,7 @@ const Showreels = ({ location }) => (
             left={true}
             img={CommercialImage}
             src={CommercialAudio}
-            dl="/audio/commercial.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/commercial.mp3"
           >
             <p>
               Having voiced countless commercials, I can guarantee seamless
@@ -180,7 +180,7 @@ const Showreels = ({ location }) => (
             left={false}
             img={ImagingImage}
             src={ImagingAudio}
-            dl="/audio/imaging.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/imaging.mp3"
           >
             <p>
               Currently the female imaging voice for Virgin Radio and KMFM, once
@@ -196,7 +196,7 @@ const Showreels = ({ location }) => (
             left={true}
             img={CorporateImage}
             src={NarrationAudio}
-            dl="/audio/narration.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/narration.mp3"
           >
             <p>
               My voice can be naturally warm and friendly for narration, but I
@@ -210,7 +210,7 @@ const Showreels = ({ location }) => (
             left={false}
             img={ContinuityImage}
             src={ContinuityAudio}
-            dl="/audio/continuity.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/continuity.mp3"
           >
             <p>
               With a natural, warm and friendly tone and an ability for
@@ -224,7 +224,7 @@ const Showreels = ({ location }) => (
             left={true}
             img={JinglesImage}
             src={JingleAudio}
-            dl="/audio/jingle.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/jingle.mp3"
           >
             <p>
               With my singing experience and professional training, I can
@@ -238,7 +238,7 @@ const Showreels = ({ location }) => (
             left={false}
             img={SingingImage}
             src={SingingAudio}
-            dl="/audio/singing.mp3.zip"
+            dl="https://shirlierandall.b-cdn.net/singing.mp3"
           >
             <p>
               From being classically trained since the age of 9 to featuring on
