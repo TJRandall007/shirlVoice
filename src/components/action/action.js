@@ -101,7 +101,7 @@ const ActionHeroMobileBtnA = styled(ActionDefaultA)`
 `;
 
 const ActionSecondaryBtn = styled(ActionDefault)`
-  border-color: transparent;
+  border-color: transparent !important;
 
   &:hover {
     background: transparent;
