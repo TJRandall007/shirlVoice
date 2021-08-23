@@ -40,7 +40,7 @@ const Signature_ = styled.span`
   width: 240px;
   transform: rotate(-10deg);
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   right: 20px;
   z-index: 1;
 

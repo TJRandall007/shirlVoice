@@ -216,6 +216,10 @@ const Navigation = styled.nav`
 const Links = styled.ul``;
 
 const LinkOuter = styled.li`
+  a:hover {
+    border-bottom: 3px solid ${accent};
+  }
+
   &.active {
     a {
       border-bottom: 3px solid ${accent};
