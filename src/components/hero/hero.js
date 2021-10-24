@@ -8,6 +8,7 @@ import { background, type } from "../../theme";
 
 // Images
 import SmileImage from "../../images/smile.jpeg";
+import ovcwinner from "../../images/ovcwinner.png";
 
 export default function Hero(props) {
   const [resi, setResi] = useState(3);
@@ -46,6 +47,12 @@ export default function Hero(props) {
               to="/audio-samples/"
               value="Listen to showreels"
             />
+          )}
+
+          {resi > 0 && (
+            <Badges className="mt-8">
+              <Badge className="w-28 l:w-32" src={ovcwinner} />
+            </Badges>
           )}
 
           {resi > 1 ? (
@@ -126,4 +133,16 @@ const ImageContainerMobile = styled.div`
     padding: 0;
     float: right;
   }
+`;
+
+const Badges = styled.div`
+  width: 100%;
+  text-align: left;
+  /* pointer-events: none; */
+  position: absolute;
+  z-index: 2;
+`;
+
+const Badge = styled.img`
+  display: inline;
 `;

@@ -6,6 +6,9 @@ import { SectionTitle } from "../type/heading";
 
 import { accent, type } from "../../theme";
 
+// Images
+import ovcwinner from "../../images/ovcwinner.png";
+
 const Twitter = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -129,6 +132,10 @@ export const Contact = () => (
           </a>
         </Icon>
       </ul>
+
+      <Badges>
+        <Badge className="w-36 md:w-44 lg:w-64" src={ovcwinner} />
+      </Badges>
     </ContainerDefault>
   </ContactContainer>
 );
@@ -171,4 +178,13 @@ const Icon = styled.li`
       stroke: #f7c0c4;
     }
   }
+`;
+
+const Badges = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
+const Badge = styled.img`
+  display: inline;
 `;

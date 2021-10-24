@@ -171,6 +171,7 @@ export default function Header({ abs, path }) {
             />
           </svg>
         </Brand>
+
         {resi > 0 ? (
           <NavigationComponent path={path} />
         ) : (
