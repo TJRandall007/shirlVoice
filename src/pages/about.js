@@ -115,8 +115,8 @@ const About = ({ location }) => {
           <Copy className="m-auto pb-32 mb-32 md:w-3/4 lg:w-1/3">
             <p>
               <strong>
-                I’m Shirlie Randall: a professional British female voice-over
-                artist, here to meet all your voicing needs.
+                I’m Shirlie Randall: an award winning, professional British
+                female voice-over artist, here to meet all your voicing needs.
               </strong>
             </p>
             <FloatImage1 resi={resi} />
