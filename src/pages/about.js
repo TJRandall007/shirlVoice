@@ -10,7 +10,7 @@ import { Contact } from "../components/roadblock/contact";
 import { ContainerRelative } from "../components/container/container";
 import { SignatureBottom } from "../components/graphical/signature";
 
-import { accent, type } from "../theme";
+import { accent, font, type } from "../theme";
 
 // Images
 import About1Image from "../images/about1.jpeg";
@@ -112,83 +112,73 @@ const About = ({ location }) => {
       <Lead title="Shirlie Randall — About" />
       <AboutContainer className="pt-8 lg:py-16">
         <ContainerRelative>
-          <Copy className="m-auto pb-32 mb-32 md:w-3/4 lg:w-1/3">
+          <Copy className="pb-32 m-auto mb-32 md:w-3/4 lg:w-1/3">
+            <Sub>About Me</Sub>
             <p>
-              <strong>
-                I’m Shirlie Randall: an award winning, professional British
-                female voice-over artist, here to meet all your voicing needs.
-              </strong>
+              I’m Shirlie Randall, a professional British female voice-over
+              artist, here to bring your scripts to life with style and
+              expertise.
+            </p>
+            <p>
+              Voice-over work has been a cornerstone of my career since my early
+              days as a young actress. I trained at the prestigious Corona
+              Academy Stage School in London, earning top marks in all LAMDA
+              acting exams. Alongside voice acting, I’m also a versatile
+              singer—trained classically and even featured on one of the most
+              iconic charted Trance tracks of all time.
+            </p>
+            <p>
+              I work from my own broadcast-quality studio in Kent, providing
+              quick turnaround times with a professional touch. For in-person
+              sessions, I’m conveniently located within easy reach of central
+              London and also available for remote direction via Skype, Source
+              Connect, or Cleanfeed.
             </p>
             <FloatImage1 resi={resi} />
+
+            <Sub>What I Offer</Sub>
             <p>
-              Voice over work has always been at the forefront of my career
-              since I started the industry as a young actress.
+              With a voice that ranges from{" "}
+              <strong className="font-semibold">bright and upbeat</strong> to{" "}
+              <strong className="font-semibold">smooth and sultry</strong>, I
+              bring variety and versatility to every project. Producers value my
+              ability to "nail a script" on the first take, thanks to my strong
+              communication skills, adaptability, and deep understanding of the
+              craft.
             </p>
+
+            <Sub>Continuing Excellence</Sub>
             <p>
-              I trained at a stage school in London (Corona Academy), completing
-              and passing all LAMDA acting exams. As well as an actor and a
-              qualified voice over, I’m also a versatile singer. From being
-              trained classically to featuring on one of the most popular
-              charted Trance tracks of all time.
+              Despite years of experience, I continually hone my skills with
+              ongoing coaching and master classes, including training with
+              world-renowned voice-over coach{" "}
+              <strong className="font-semibold">Nancy Wolfson</strong> at
+              Braintracks Audio. My commitment to growth ensures I deliver
+              cutting-edge performances tailored to your needs.
             </p>
+
+            <Sub>A Family Talent</Sub>
             <p>
-              I work from my own professional, broadcast quality home studio
-              based in Kent. If needed, I’m within easy reach of central London
-              and available to travel to a studio of your choice. Alternatively,
-              you can direct me remotely using Skype, Source Connect, ipDTL or
-              Cleanfeed.
+              Voice acting runs in my family! My brother, Dave Bethell, is an
+              exceptional voice-over artist and a brilliant music composer based
+              in Los Angeles, California. With his own state-of-the-art studio,
+              he delivers world-class audio. Check out his incredible work at{" "}
+              <a href="http://davebethell.com">davebethell.com</a>.
             </p>
             <FloatImage2 resi={resi} />
+            <Sub>Music to Match</Sub>
             <p>
-              I have incredible flexibility and can provide a fast turnaround
-              for your project. With excellent communication skills and the
-              ability to take direction, I’m renowned with producers as a female
-              voice over who can “nail a script” on the first take.
+              Looking for the perfect soundtrack to accompany your project? I’ve
+              got you covered! My{" "}
+              <strong className="font-semibold">Beats Bakery</strong> music
+              production library offers tracks for every need. Explore our
+              outstanding selection of albums at{" "}
+              <a href="https://beatsbakery.com">beatsbakery.com</a>.
             </p>
-            <p>
-              With a commercial voice that ranges from bright and upbeat to
-              smooth and sultry, I can offer variety and versatility.
-            </p>
-            <FloatImage3 resi={resi} />
-            <p>
-              Despite my immense skill and experience, my talent continues to be
-              refined and improved all the time, attending voice-over master
-              classes and having ongoing professional voice coaching with the
-              world-renowned voice-over coach{" "}
-              <a href="https://braintracksaudio.com/" target="_blank">
-                Nancy Wolfson at Braintracks Audio
-              </a>
-              .
-            </p>
-            <hr />
-            <p>
-              My passion for voice-overs doesn’t just stop with my career, as
-              the talent runs in my family. My brother Dave Bethell is not only
-              an incredible voice-over artist but an undeniably brilliant music
-              composer too.
-            </p>
-            <p>
-              Based in Los Angeles, California, he operates from his own top of
-              the range studio. Feel free to check out his extraordinary gift at{" "}
-              <a href="http://www.davebethell.com/" target="_blank">
-                davebethell.com
-              </a>
-              .
-            </p>
-            <hr />
-            <p>
-              Just call this your one-stop shop as not only can I supply an
-              outstanding voice for your project, but I can also supply the
-              music!
-            </p>
-            <p>
-              Beats Bakery is my very own music production library, with a track
-              suited for your every need. Head over to listen to some of the
-              amazing albums that can be featured on your next project at{" "}
-              <a href="https://beatsbakery.com/" target="_blank">
-                beatsbakery.com
-              </a>
-              .
+            <p className="pt-12">
+              With my passion, skill, and dedication, I’m your one-stop solution
+              for professional voice-over and custom music. Let’s create
+              something amazing together!
             </p>
             <SignatureBottom />
           </Copy>
@@ -205,6 +195,16 @@ const About = ({ location }) => {
 };
 
 export default About;
+
+const Sub = styled.h2`
+  color: ${type.default};
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1em;
+  font-family: ${font.sans.family};
+  font-weight: ${font.sans.weight};
+  padding-bottom: 14px;
+`;
 
 const AboutContainer = styled.div`
   background: white;

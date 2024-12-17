@@ -147,30 +147,26 @@ export const Section = ({
 };
 
 const Intro = () => (
-  <ShowreelsIntro className="lg:w-8/12 lg:text-lg m-auto">
+  <ShowreelsIntro className="m-auto lg:w-8/12 lg:text-lg">
     <p>
-      During my career, I’ve been the female Sponsorship and Promotions
-      voiceover for more than 25 UK Radio Stations including The Wireless Group,
-      and UKRD Group. Currently, I’m the female imaging voice over for KMFM and
-      Virgin Radio.
+      Looking for a professional female voiceover artist with a proven track
+      record? Throughout my career, I’ve been the Sponsorship and Promotions
+      voiceover for over 25 UK radio stations, including Virgin Radio, The
+      Wireless Group, and the UKRD Group. Currently, I’m the female imaging
+      voice for Globals Smooth Radio Network.
     </p>
 
     <p>
-      My skills stretch beyond just radio stations, as alongside this, I have
-      voiced countless TV commercials and corporate campaigns, both local,
-      national, and global.
+      My expertise extends beyond radio, with extensive experience voicing TV
+      commercials and corporate campaigns for local, national, and global
+      clients. With a bright, engaging voice and years of experience, I deliver
+      top-quality results with creativity, professionalism, and attention to
+      detail.
     </p>
 
     <p>
-      With great competency, excellent skills, and years of experience, I can
-      bring a high degree of quality and creative experience to your project,
-      with undeniable professionalism and a bright voice that you won’t find
-      anywhere else.
-    </p>
-
-    <p>
-      Check out my audio showreels below for a snippet of the outstanding
-      service I can provide for you.
+      Explore my audio showreels below to hear how I can elevate your project to
+      the next level. Let’s create something exceptional together!
     </p>
   </ShowreelsIntro>
 );
@@ -192,11 +188,14 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/commercial.mp3.zip"
           >
             <p>
-              Having voiced countless commercials, I can guarantee seamless
-              delivery and performance. For your commercial needs, my
-              versatility means that I can adapt my voice to whatever style your
-              project requires. From bright and upbeat to smooth and sultry or
-              natural and warm to cool and fresh, plus many more.
+              With extensive experience voicing countless commercials, I
+              guarantee a seamless delivery tailored to your project. My
+              versatile range allows me to adapt my voice to any style, from{" "}
+              <strong className="font-semibold">bright and upbeat</strong> to{" "}
+              <strong className="font-semibold">smooth and sultry</strong>, or{" "}
+              <strong className="font-semibold">natural and warm</strong> to{" "}
+              <strong className="font-semibold">cool and fresh</strong>,{" "}
+              ensuring the perfect match for your brand.
             </p>
           </Section>
           <Section
@@ -207,12 +206,16 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/imaging.mp3.zip"
           >
             <p>
-              Currently the female imaging voice for Virgin Radio and KMFM, once
-              again I can guarantee that my skills will provide the best quality
-              for your project. Having been the female Sponsorship and
-              Promotions voiceover for The Wireless Group and UKRD Group, I can
-              apply this invaluable wealth of experience to ensure the best
-              service for you.
+              As the current female Sponsorship and Promotions voice for{" "}
+              <strong className="font-semibold">Smooth Radio</strong>, I bring
+              unmatched quality and expertise to every project. With prior
+              experience as the female imaging voiceover for{" "}
+              <strong className="font-semibold">Virgin Radio</strong>,{" "}
+              <strong className="font-semibold">KMFM</strong>,{" "}
+              <strong className="font-semibold">The Wireless Group</strong> and{" "}
+              <strong className="font-semibold">UKRD Group</strong>, I will{" "}
+              deliver professional, engaging results that elevate your station's
+              sound.
             </p>
           </Section>
           <Section
@@ -223,10 +226,18 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/narration.mp3.zip"
           >
             <p>
-              My voice can be naturally warm and friendly for narration, but I
-              can also present a sincere, authoritative voice for corporate,
-              documentary and eLearning. I’m also fantastic at creating a
-              magical or mumsy voice for audiobooks.
+              Whether you need a{" "}
+              <strong className="font-semibold">
+                naturally warm and friendly
+              </strong>{" "}
+              narration or a <strong className="font-semibold">sincere</strong>,{" "}
+              <strong className="font-semibold">authoritative</strong> tone for
+              corporate videos, documentaries, or eLearning, my voice fits the
+              bill. I can also bring a{" "}
+              <strong className="font-semibold">
+                magical or nurturing "mumsy" quality
+              </strong>{" "}
+              to audiobooks, adding depth and personality to your story.
             </p>
           </Section>
           <Section
@@ -237,10 +248,13 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/continuity.mp3.zip"
           >
             <p>
-              With a natural, warm and friendly tone and an ability for
-              improvisation and scriptwriting, I can provide a smooth and
-              seamless flow between programming for TV and Radio, perfect for
-              any of your continuity needs.
+              My <strong className="font-semibold">natural</strong>,{" "}
+              <strong className="font-semibold">warm</strong>, and{" "}
+              <strong className="font-semibold">friendly tone</strong>, combined
+              with skills in improvisation and scriptwriting, ensures a smooth
+              and seamless flow between programming for TV and Radio. I’m the
+              perfect fit to handle all your continuity needs with
+              professionalism and charm.
             </p>
           </Section>
           <Section
@@ -251,10 +265,11 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/jingle.mp3.zip"
           >
             <p>
-              With my singing experience and professional training, I can
-              provide you with any vocals required for jingles and music beds.
-              From bright and bubbly to cool and commercial, I can make sure
-              that your jingle won’t be forgotten.
+              With my professional training and singing background, I can
+              provide standout vocals for jingles and music beds. From{" "}
+              <strong className="font-semibold">bright and bubbly</strong> to{" "}
+              <strong className="font-semibold">cool and commercial</strong>,{" "}
+              I’ll ensure your jingle leaves a lasting impression.
             </p>
           </Section>
           <Section
@@ -265,11 +280,12 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/singing.mp3.zip"
           >
             <p>
-              From being classically trained since the age of 9 to featuring on
-              one of the most iconic charted Trance Tracks of all time, singing
-              has always been a passion of mine. Having been the lead singer in
-              a band for many years, I have gained a great deal of onstage
-              experience and performance skills.
+              Classically trained since the age of 9 and featured on one of the
+              most iconic charted Trance tracks of all time—Darren Tate's "Let
+              The Light Shine In"—singing has always been a true passion of
+              mine. As a former lead singer in a band for many years, I bring
+              extensive stage experience and performance skills to every singing
+              project.
             </p>
           </Section>
         </ContainerDefault>

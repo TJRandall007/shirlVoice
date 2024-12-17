@@ -20,30 +20,41 @@ import RadioAudio from "../audio/radio.wav";
 import StudioImage from "../images/studio.jpeg";
 
 const Intro = () => (
-  <StudioIntro className="lg:w-8/12 lg:text-lg m-auto">
-    <p>
-      I have my own modern, professionally equipped, digital recording studio
-      furnished with high quality technology. I also have my own editing
-      software enabling me to record and self produce voice over sessions in
-      many formats including; MP3, WAV and AIFF. Having a personal studio
-      ensures a fast turnaround, usually delivering audio on the same day,
-      saving you time and money on studio hire!
+  <StudioIntro className="m-auto lg:w-8/12 lg:text-lg">
+    <p className="font-semibold">
+      Professional Voiceover Services with Modern Studio Facilities.
     </p>
 
     <p>
-      If needed, I’m within easy reach of central London and available to travel
-      to a studio of your choice. Alternatively, you can direct me remotely
-      using Skype, Source Connect, ipDTL or Cleanfeed.
+      I operate a fully equipped, state-of-the-art digital recording studio
+      featuring high-quality technology to deliver exceptional audio. With my
+      professional setup and editing software, I can self-produce voiceover
+      sessions in formats including MP3, WAV, and AIFF. My personal studio
+      ensures a <strong className="font-semibold">fast turnaround</strong>,
+      often providing same-day delivery to save you time and money on external
+      studio hire.
+    </p>
+
+    <p>
+      If required, I am conveniently located within easy reach of central London
+      and available to travel to a studio of your choice. Alternatively, you can
+      direct me remotely using platforms such as{" "}
+      <strong className="font-semibold">Skype</strong>,{" "}
+      <strong className="font-semibold">Source Connect</strong>, or{" "}
+      <strong className="font-semibold">Cleanfeed</strong> for seamless
+      collaboration.
     </p>
   </StudioIntro>
 );
 
 const List = ({ title, items }) => (
   <div>
-    <h2 className="font-semibold pb-2">{title}</h2>
+    <h2 className="pb-2 font-semibold">{title}</h2>
     <ul>
-      {items.map((i) => (
-        <Item key={i}>{i}</Item>
+      {items.map(([f, s]) => (
+        <Item key={f}>
+          <span className="font-medium">{f}</span> {s}
+        </Item>
       ))}
     </ul>
   </div>
@@ -51,31 +62,39 @@ const List = ({ title, items }) => (
 
 const Lists = () => {
   const left = [
-    "SE Electronics Z5600A Microphone",
-    "Yamaha 01V Digital Mixing Console",
-    "Focusrite Scarlett 2i2",
-    "Rokit8 Monitors",
-    "Adobe Audition Software",
-    "Broadcast quality studio",
-    "iMac Computer",
+    ["Sennheiser Microphone:", "Crystal-clear voice capture"],
+    ["Yamaha 01V Digital Mixing Console:", "Professional-grade audio mixing"],
+    ["Focusrite Scarlett 18i20:", "Superior audio interface"],
+    ["Rokit8 Monitors:", "Precision sound monitoring"],
+    ["Adobe Audition Software:", "Advanced editing capabilities"],
+    ["iMac Computer:", "Reliable and efficient production"],
+    ["Broadcast Quality Output:", "Ready for any platform"],
   ];
 
   const right = [
-    "Fast Turnaround",
-    "Creative & Flexible",
-    "Experienced Female Voiceover",
-    "Skype, Cleanfeed",
-    "Source Connect, ipDTL",
-    "British RP",
-    "Friendly & Reliable",
+    [
+      "Experienced Female Voiceover:",
+      "British RP accent with versatility and charm",
+    ],
+    ["Creative & Flexible:", "Tailored voiceovers to match your vision"],
+    ["Fast Turnaround:", "Same-day delivery available"],
+    ["Friendly & Reliable:", "Professional service with a personal touch"],
   ];
 
   return (
-    <StudioLists className="lg:w-8/12 lg:text-lg mx-auto">
-      <div className="grid gap-8 py-12 md:pb-32 text-center md:gap-4 lg:text-left md:grid-cols-2">
-        <List title={"Studio Facilities"} items={left} />
-        <List title={"Professional Voice over"} items={right} />
+    <StudioLists className="py-12 mx-auto lg:w-8/12 lg:text-lg">
+      <div className="grid gap-8 text-center md:gap-4 lg:text-left md:grid-cols-2">
+        <List title={"Studio Highlights"} items={left} />
+        <List title={"Why Choose Me?"} items={right} />
       </div>
+      <p className="pt-12 md:pb-32">
+        Whether you need polished audio for commercials, corporate projects, or
+        radio imaging, my studio is equipped to meet your needs with efficiency
+        and professionalism.{" "}
+        <strong className="italic font-semibold">
+          Let’s bring your project to life!
+        </strong>
+      </p>
     </StudioLists>
   );
 };
@@ -139,6 +158,8 @@ const StudioIntro = styled.div`
 `;
 
 const Item = styled.li`
+  font-size: 16px;
+
   &:before {
     content: "•";
     color: #f7c0c4;

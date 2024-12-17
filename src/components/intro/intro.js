@@ -22,7 +22,7 @@ export function IntroComponentMobile() {
     <IntroContainer>
       <ContainerDefault>
         <IntroGridMobile className="py-10">
-          <IntroCard className="p-8 mb-8 block">
+          <IntroCard className="block p-8 mb-8">
             <h2>About me</h2>
             <p>
               I’m Shirlie Randall, and have been the voice for numerous brands
@@ -62,7 +62,7 @@ export function IntroComponentTabletSmall() {
   return (
     <IntroContainer>
       <ContainerDefault>
-        <IntroGrid className="flex gap-x-4 py-16">
+        <IntroGrid className="flex py-16 gap-x-4">
           <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player
@@ -102,7 +102,7 @@ export function IntroComponentTablet() {
   return (
     <IntroContainer>
       <ContainerDefault>
-        <IntroGrid className="flex gap-x-4 py-16">
+        <IntroGrid className="flex py-16 gap-x-4">
           <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player
@@ -152,7 +152,7 @@ export function IntroComponent() {
   return (
     <IntroContainer>
       <ContainerDefault>
-        <IntroGrid className="flex gap-x-4 py-16">
+        <IntroGrid className="flex py-16 gap-x-4">
           <Parallax y={[40, -40]} styleOuter={{ zIndex: 1, flex: 1 }}>
             <Box>
               <Player
@@ -167,18 +167,20 @@ export function IntroComponent() {
             <IntroCard style={{ height: "375px" }} className="p-8">
               <h2>About me</h2>
               <p>
-                I’m Shirlie Randall, and have been the voice for numerous brands
-                and projects for over 20 years! I can adapt my voice to whatever
-                style your project requires, from bright and upbeat to smooth
-                and sultry or natural and warm to cool and fresh, plus many
-                more.
+                I’m <strong className="font-semibold">Shirlie Randall</strong>,{" "}
+                a female British professional voice-over artist with over 20
+                years of experience bringing brands and projects to life.
               </p>
-
               <p>
-                With excellent communication skills, I am renowned with
-                <br />
-                producers as a female voice over who can “nail a script” <br />
-                on the first take.
+                Versatility is my strength — I can adapt my voice to perfectly
+                match your project’s needs, whether it’s{" "}
+                <strong className="font-semibold">bright and upbeat</strong>, to{" "}
+                <strong className="font-semibold">smooth and sultry</strong>.
+              </p>
+              <p className="pr-64">
+                Renowned for my excellent communication skills and ability to
+                take direction; praised as a voice-over artist who can “nail a
+                script” the first take.
               </p>
 
               <Signature />
@@ -267,7 +269,7 @@ const IntroCard = styled.div`
     font-size: 2rem;
     font-family: ${font.sans.family};
     font-weight: ${font.sans.weight};
-    padding-bottom: 0.5em;
+    padding-bottom: 0.2em;
   }
 
   p {

@@ -32,17 +32,24 @@ const VideoGroup = ({ id, title }) => (
 );
 
 const Intro = () => (
-  <ShowreelsIntro className="lg:w-8/12 lg:text-lg m-auto">
+  <ShowreelsIntro className="m-auto lg:w-8/12 lg:text-lg">
     <p>
-      I’ve been the female voice over for many television commercials, online
-      apps, explainer videos, International documentaries and corporate videos.
+      I’ve had the privilege of being the female voiceover for a variety of
+      projects, including television commercials, online apps, explainer videos,
+      international documentaries, and corporate content.
     </p>
 
     <p>
-      If you have a project that requires a professional British female voice
-      over artist, then contact me now!
+      If your project needs a professional British female voiceover artist,
+      don’t hesitate —{" "}
+      <a className="italic underline" href="/contact">
+        contact me today!
+      </a>
     </p>
-    <p>Check out some of my recent work in the video samples below:</p>
+    <p>
+      Take a look at some of my recent work in the video samples below and
+      discover how I can bring your project to life.
+    </p>
   </ShowreelsIntro>
 );
 
