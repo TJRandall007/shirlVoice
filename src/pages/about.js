@@ -162,8 +162,8 @@ const About = ({ location }) => {
               Voice acting runs in my family! My brother, Dave Bethell, is an
               exceptional voice-over artist and a brilliant music composer based
               in Los Angeles, California. With his own state-of-the-art studio,
-              he delivers world-class audio. Check out his incredible work at{" "}
-              <a href="http://davebethell.com">davebethell.com</a>.
+              he delivers world-class audio. Check out his incredible work on{" "}
+              <a href="https://www.instagram.com/voicedave/">his Instagram</a>.
             </p>
             <FloatImage2 resi={resi} />
             <Sub>Music to Match</Sub>
