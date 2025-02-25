@@ -214,7 +214,7 @@ export default function Intro() {
     const w = document.documentElement.clientWidth;
 
     const size =
-      w > 1290
+      w > 1530
         ? "DESKTOP"
         : w > 827
         ? "TABLET"
