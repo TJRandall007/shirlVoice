@@ -55,7 +55,10 @@ const Intro = () => (
 
 const Showreels = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Video Samples" />
+    <SEO
+      title="Video & TV Voiceover Showreel"
+      description="See Shirlie Randall's TV and video voiceover work for Disney, Weight Watchers, Morrisons & more — including the Paddington 2 singing advert."
+    />
     <Lead title="Shirlie Randall — Video Samples" />
     <ShowreelsContainer className="pt-8 lg:py-16">
       <ContainerDefault>

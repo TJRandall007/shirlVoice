@@ -174,7 +174,10 @@ const Intro = () => (
 const Showreels = ({ location }) => (
   <Layout location={location}>
     <RecoilRoot>
-      <SEO title="Audio Samples" />
+      <SEO
+        title="Voiceover Demos | Commercial, Corporate & Radio Imaging"
+        description="Listen to Shirlie Randall's voiceover demos: commercial, corporate, radio imaging & promos. Current female imaging voice for Smooth Radio Network."
+      />
       <Lead title="Shirlie Randall — Audio Samples" />
       <ShowreelsContainer className="pt-8 lg:py-16">
         <ContainerDefault>

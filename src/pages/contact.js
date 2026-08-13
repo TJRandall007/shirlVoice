@@ -43,7 +43,10 @@ const Intro = () => (
 
 const Contact = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Contact" />
+    <SEO
+      title="Contact | Book a British Female Voiceover Artist"
+      description="Get a fast, no-obligation quote from British voiceover artist Shirlie Randall. Call, email or use the contact form — same-day turnaround available."
+    />
     <Lead title="Shirlie Randall — Contact" />
     <ContactContainer className="pt-8 lg:py-16">
       <ContainerDefault>

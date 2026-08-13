@@ -108,12 +108,20 @@ const About = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="About" />
+      <SEO
+        title="About Shirlie Randall | British Voiceover Artist & Singer"
+        description="British voiceover artist trained at Corona Academy (LAMDA), coached by Nancy Wolfson. 20+ years voicing ads, corporate content and radio for major UK brands."
+      />
       <Lead title="Shirlie Randall — About" />
       <AboutContainer className="pt-8 lg:py-16">
         <ContainerRelative>
           <Copy className="pb-32 m-auto mb-32 md:w-3/4 lg:w-1/3">
             <Sub>About Me</Sub>
+            <p>
+              I’m a British female voiceover artist based in Kent, providing
+              broadcast-quality commercial, corporate and radio voiceover with
+              fast turnaround for clients across the UK and internationally.
+            </p>
             <p>
               I’m Shirlie Randall, a professional British female voice-over
               artist, here to bring your scripts to life with style and
@@ -180,6 +188,42 @@ const About = ({ location }) => {
               for professional voice-over and custom music. Let’s create
               something amazing together!
             </p>
+
+            <Sub className="pt-12">FAQs</Sub>
+            <p>
+              <strong className="font-semibold">
+                What types of voiceover work do you do?
+              </strong>
+              <br />
+              Commercials, corporate/e-learning, radio imaging &amp; promos, and
+              character/animation work.
+            </p>
+            <p>
+              <strong className="font-semibold">
+                Do you offer remote recording sessions?
+              </strong>
+              <br />
+              Yes — I direct remotely via Source Connect, Cleanfeed, Skype or
+              Zoom, with same-day turnaround in most cases.
+            </p>
+            <p>
+              <strong className="font-semibold">
+                How much does a voiceover cost?
+              </strong>
+              <br />
+              Rates depend on usage, length and platform (broadcast/online/
+              internal) — get in touch for a quick, no-obligation quote.
+            </p>
+            <p>
+              <strong className="font-semibold">
+                Can I hear more of your work before booking?
+              </strong>
+              <br />
+              Yes — full commercial, corporate and radio demos are on the{" "}
+              <a href="/audio-samples">Audio Samples</a> page, and video work
+              is on the <a href="/video-samples">Video Samples</a> page.
+            </p>
+
             <SignatureBottom />
           </Copy>
         </ContainerRelative>

@@ -102,7 +102,10 @@ const Lists = () => {
 const Studio = ({ location }) => (
   <RecoilRoot>
     <Layout location={location}>
-      <SEO title="Studio" />
+      <SEO
+        title="Remote Recording Studio | Same-Day Voiceover Delivery"
+        description="Broadcast-quality home studio in Kent with same-day turnaround. Remote direction via Source Connect, Cleanfeed or Skype for voiceover clients worldwide."
+      />
       <Lead title="Shirlie Randall — Studio" />
       <StudioContainer className="pt-8 lg:py-16">
         <ContainerDefault>
