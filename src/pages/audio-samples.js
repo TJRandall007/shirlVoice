@@ -12,6 +12,7 @@ import { ContainerDefault } from "../components/container/container";
 import Lead from "../components/lead/lead";
 import Player from "../components/player/player";
 import { SectionMinorTitle } from "../components/type/heading";
+import ContactActions from "../components/contact-actions/contact-actions";
 
 import { accent } from "../theme";
 
@@ -63,7 +64,7 @@ const SectionCopy = ({ title, left, children, download, resi }) => (
       <div className={left ? "lg:pr-32" : "lg:pr-12"}>{children}</div>
       <Action
         classes="mt-2 inline-block"
-        value={`Download ${title}`}
+        value={`Download ${title} demo (MP3)`}
         to={download}
         download={true}
       />
@@ -149,25 +150,26 @@ export const Section = ({
 const Intro = () => (
   <ShowreelsIntro className="m-auto lg:w-8/12 lg:text-lg">
     <p>
-      Looking for a professional female voiceover artist with a proven track
-      record? Throughout my career, I’ve been the Sponsorship and Promotions
-      voiceover for over 25 UK radio stations, including Virgin Radio, The
-      Wireless Group, and the UKRD Group. Currently, I’m the female imaging
-      voice for Globals Smooth Radio Network.
+      Listen to Shirlie Randall’s professional British female voice-over demos,
+      including commercials, radio imaging, narration, continuity, jingles and
+      singing.
     </p>
-
     <p>
-      My expertise extends beyond radio, with extensive experience voicing TV
-      commercials and corporate campaigns for local, national, and global
-      clients. With a bright, engaging voice and years of experience, I deliver
-      top-quality results with creativity, professionalism, and attention to
-      detail.
+      With over 25 years’ experience, Shirlie is the female imaging voice for
+      Global’s Smooth Radio Network and has voiced sponsorships, promotions and
+      imaging for more than 25 UK radio stations, including Virgin Radio, The
+      Wireless Group and UKRD.
     </p>
-
     <p>
-      Explore my audio showreels below to hear how I can elevate your project to
-      the next level. Let’s create something exceptional together!
+      From bright, engaging commercials to warm narration and authoritative
+      corporate delivery, every performance is recorded with creativity,
+      professionalism and attention to detail.
     </p>
+    <p>
+      Need a particular style or a custom audition? Email Shirlie to discuss
+      your project.
+    </p>
+    <ContactActions compact />
   </ShowreelsIntro>
 );
 
@@ -175,104 +177,78 @@ const Showreels = ({ location }) => (
   <Layout location={location}>
     <RecoilRoot>
       <SEO
-        title="Voiceover Demos | Commercial, Corporate & Radio Imaging"
-        description="Listen to Shirlie Randall's voiceover demos: commercial, corporate, radio imaging & promos. Current female imaging voice for Smooth Radio Network."
+        title="British Voice-over Demos | Commercial & Radio Imaging"
+        description="Listen to Shirlie Randall’s British female voice-over demos for commercials, radio imaging, corporate narration, continuity, jingles and singing."
       />
-      <Lead title="Shirlie Randall — Audio Samples" />
+      <Lead title="Shirlie Randall — British Voice-over Demos" />
       <ShowreelsContainer className="pt-8 lg:py-16">
         <ContainerDefault>
           <Intro />
 
           <Section
-            title="Commercial"
+            title="Commercial voice-over"
             left={true}
             img={CommercialImage}
             src={CommercialAudio}
             dl="https://shirlierandall.b-cdn.net/commercial.mp3.zip"
           >
             <p>
-              With extensive experience voicing countless commercials, I
-              guarantee a seamless delivery tailored to your project. My
-              versatile range allows me to adapt my voice to any style, from{" "}
-              <strong className="font-semibold">bright and upbeat</strong> to{" "}
-              <strong className="font-semibold">smooth and sultry</strong>, or{" "}
-              <strong className="font-semibold">natural and warm</strong> to{" "}
-              <strong className="font-semibold">cool and fresh</strong>,{" "}
-              ensuring the perfect match for your brand.
+              Bright and upbeat, smooth and sophisticated, natural and warm, or
+              cool and contemporary—Shirlie delivers versatile commercial
+              voice-overs tailored to your brand, audience and campaign.
             </p>
           </Section>
           <Section
-            title="Imaging"
+            title="Radio imaging"
             left={false}
             img={ImagingImage}
             src={ImagingAudio}
             dl="https://shirlierandall.b-cdn.net/imaging.mp3.zip"
           >
             <p>
-              As the current female Sponsorship and Promotions voice for{" "}
-              <strong className="font-semibold">Smooth Radio</strong>, I bring
-              unmatched quality and expertise to every project. With prior
-              experience as the female imaging voiceover for{" "}
-              <strong className="font-semibold">Virgin Radio</strong>,{" "}
-              <strong className="font-semibold">KMFM</strong>,{" "}
-              <strong className="font-semibold">The Wireless Group</strong> and{" "}
-              <strong className="font-semibold">UKRD Group</strong>, I will{" "}
-              deliver professional, engaging results that elevate your station's
-              sound.
+              The female imaging voice for Global’s Smooth Radio Network,
+              Shirlie brings pace, personality and polish to radio imaging,
+              sponsorship and promotions. Previous stations include Virgin
+              Radio, KMFM, The Wireless Group and UKRD.
             </p>
           </Section>
           <Section
-            title="Corporate"
+            title="Narration and corporate"
             left={true}
             img={CorporateImage}
             src={NarrationAudio}
             dl="https://shirlierandall.b-cdn.net/narration.mp3.zip"
           >
             <p>
-              Whether you need a{" "}
-              <strong className="font-semibold">
-                naturally warm and friendly
-              </strong>{" "}
-              narration or a <strong className="font-semibold">sincere</strong>,{" "}
-              <strong className="font-semibold">authoritative</strong> tone for
-              corporate videos, documentaries, or eLearning, my voice fits the
-              bill. I can also bring a{" "}
-              <strong className="font-semibold">
-                magical or nurturing "mumsy" quality
-              </strong>{" "}
-              to audiobooks, adding depth and personality to your story.
+              Warm and friendly or sincere and authoritative, Shirlie records
+              clear, engaging narration for corporate films, documentaries,
+              e-learning and audiobooks.
             </p>
           </Section>
           <Section
-            title="Continuity"
+            title="TV and radio continuity"
             left={false}
             img={ContinuityImage}
             src={ContinuityAudio}
             dl="https://shirlierandall.b-cdn.net/continuity.mp3.zip"
           >
             <p>
-              My <strong className="font-semibold">natural</strong>,{" "}
-              <strong className="font-semibold">warm</strong>, and{" "}
-              <strong className="font-semibold">friendly tone</strong>, combined
-              with skills in improvisation and scriptwriting, ensures a smooth
-              and seamless flow between programming for TV and Radio. I’m the
-              perfect fit to handle all your continuity needs with
-              professionalism and charm.
+              A natural, warm delivery combined with improvisation and
+              scriptwriting experience gives Shirlie’s continuity work an easy,
+              seamless flow between programmes.
             </p>
           </Section>
           <Section
-            title="Vocals (Jingles)"
+            title="Jingles and vocals"
             left={true}
             img={JinglesImage}
             src={JingleAudio}
             dl="https://shirlierandall.b-cdn.net/jingle.mp3.zip"
           >
             <p>
-              With my professional training and singing background, I can
-              provide standout vocals for jingles and music beds. From{" "}
-              <strong className="font-semibold">bright and bubbly</strong> to{" "}
-              <strong className="font-semibold">cool and commercial</strong>,{" "}
-              I’ll ensure your jingle leaves a lasting impression.
+              Professionally trained and highly versatile, Shirlie records
+              memorable vocals for jingles and music beds, from bright and
+              bubbly to cool and commercial.
             </p>
           </Section>
           <Section
@@ -283,11 +259,9 @@ const Showreels = ({ location }) => (
             dl="https://shirlierandall.b-cdn.net/singing.mp3.zip"
           >
             <p>
-              Classically trained since the age of 9 and featured on one of the
-              most iconic charted Trance tracks of all time—Darren Tate's "Let
-              The Light Shine In"—singing has always been a true passion of
-              mine. As a former lead singer in a band for many years, I bring
-              extensive stage experience and performance skills to every singing
+              Classically trained from the age of nine, Shirlie featured on
+              Darren Tate’s charted trance track “Let the Light Shine In” and
+              brings extensive stage and studio experience to every singing
               project.
             </p>
           </Section>
