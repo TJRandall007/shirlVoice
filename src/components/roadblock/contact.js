@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { ContainerDefault } from "../container/container";
 import { SectionTitle } from "../type/heading";
+import ContactActions from "../contact-actions/contact-actions";
 
 import { accent, type } from "../../theme";
 
@@ -94,11 +95,7 @@ export const Contact = () => (
   <ContactContainer className="pt-12 pb-6 lg:py-32">
     <ContainerDefault>
       <SectionTitle text="Get in touch" />
-      <Copy className="text-xl lg:text-4xl">
-        +44 (0) 7825 248 481 <Divider>/</Divider> hello<Mask>@</Mask>
-        shirlierandall
-        <Mask>.com</Mask>
-      </Copy>
+      <ContactActions />
       <ul className="flex justify-center py-8">
         <Icon>
           <a href="https://twitter.com/shirlierandall" target="_blank">
@@ -135,6 +132,7 @@ export const Contact = () => (
 
       <Badges>
         <Badge className="w-36 md:w-44 lg:w-64" src={ovcwinner} />
+        <AwardText>One Voice Awards winner, 2021</AwardText>
       </Badges>
     </ContainerDefault>
   </ContactContainer>
@@ -142,20 +140,6 @@ export const Contact = () => (
 
 const ContactContainer = styled.div`
   background: white;
-`;
-
-const Copy = styled.p`
-  color: ${type.default};
-  text-align: center;
-  padding-top: 0.5em;
-`;
-
-const Divider = styled.span`
-  color: ${accent};
-`;
-
-const Mask = styled.code`
-  font-family: inherit;
 `;
 
 const Icon = styled.li`
@@ -187,4 +171,10 @@ const Badges = styled.div`
 
 const Badge = styled.img`
   display: inline;
+`;
+
+const AwardText = styled.p`
+  color: ${type.default};
+  font-weight: 500;
+  margin-top: 0.5rem;
 `;
