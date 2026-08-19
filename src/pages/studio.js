@@ -40,7 +40,7 @@ const Intro = () => (
 
 const List = ({ title, items }) => (
   <div>
-    <h2 className="pb-2 font-semibold">{title}</h2>
+    <h2 className="pb-2 font-semibold text-center lg:text-left">{title}</h2>
     <ul>
       {items.map(([f, s]) => (
         <Item key={f}>
@@ -72,7 +72,7 @@ const Lists = () => {
 
   return (
     <StudioLists className="py-12 mx-auto lg:w-8/12 lg:text-lg">
-      <div className="grid gap-8 text-center md:gap-4 lg:text-left md:grid-cols-2">
+      <div className="grid gap-8 text-left md:gap-4 md:grid-cols-2">
         <List title={"Studio Highlights"} items={left} />
         <List title={"Why Choose Me?"} items={right} />
       </div>
@@ -151,11 +151,15 @@ const StudioIntro = styled.div`
 
 const Item = styled.li`
   font-size: 16px;
+  line-height: 1.5;
+  padding-left: 12px;
+  position: relative;
 
   &:before {
     content: "•";
     color: #f7c0c4;
-    padding-right: 3px;
+    left: 0;
+    position: absolute;
   }
 `;
 
