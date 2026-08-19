@@ -23,6 +23,7 @@ import ImagingAudio from "../audio/imaging.mp3";
 import JingleAudio from "../audio/jingle.mp3";
 import NarrationAudio from "../audio/narration.mp3";
 import SingingAudio from "../audio/singing.mp3";
+import IvrAudio from "../audio/shirlie-randall-ivr-on-hold-demo.mp3";
 
 // Images
 import CommercialImage from "../images/commercial.jpeg";
@@ -31,6 +32,7 @@ import CorporateImage from "../images/corporate.jpeg";
 import ContinuityImage from "../images/continuity.jpeg";
 import JinglesImage from "../images/jingles.jpeg";
 import SingingImage from "../images/singing.jpeg";
+import IvrImage from "../images/ivr-on-hold-demo-artwork.jpg";
 
 const SectionPlayer = ({ title, img, src, resi, showreel }) => {
   if (resi > 0) {
@@ -239,8 +241,22 @@ const Showreels = ({ location }) => (
             </p>
           </Section>
           <Section
-            title="Jingles and vocals"
+            title="IVR, telephone prompts and on-hold"
             left={true}
+            img={IvrImage}
+            src={IvrAudio}
+            dl={IvrAudio}
+          >
+            <p>
+              Clear, friendly and consistent voice prompts help customers move
+              confidently through telephone menus and on-hold information.
+              Shirlie records professional IVR, call-routing prompts, voicemail
+              greetings and on-hold messages tailored to your organisation.
+            </p>
+          </Section>
+          <Section
+            title="Jingles and vocals"
+            left={false}
             img={JinglesImage}
             src={JingleAudio}
             dl="https://shirlierandall.b-cdn.net/jingle.mp3.zip"
@@ -253,7 +269,7 @@ const Showreels = ({ location }) => (
           </Section>
           <Section
             title="Singing"
-            left={false}
+            left={true}
             img={SingingImage}
             src={SingingAudio}
             dl="https://shirlierandall.b-cdn.net/singing.mp3.zip"
