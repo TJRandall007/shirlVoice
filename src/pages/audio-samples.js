@@ -351,9 +351,15 @@ const SectionGridCopy = styled.div`
     padding: 12px 32px 64px;
 
     .demo-download {
+      align-items: center;
       background: ${accent};
       border-color: ${accent};
+      display: flex;
       font-weight: 500;
+      justify-content: center;
+      min-height: 76px;
+      text-align: center;
+      width: 100%;
     }
   }
 `;
