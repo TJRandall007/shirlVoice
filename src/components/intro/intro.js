@@ -82,7 +82,7 @@ export function IntroComponentTabletSmall() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
             <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
@@ -116,7 +116,7 @@ export function IntroComponentTablet() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
             <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
@@ -160,7 +160,7 @@ export function IntroComponent() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
             <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
@@ -236,12 +236,12 @@ const IntroGrid = styled.div`
 const IntroGridMobile = styled.div`
   position: relative;
   padding-bottom: 36px;
-  margin-top: -70px;
+  padding-top: 36px;
 `;
 
 const IntroCard = styled.div`
   background: white;
-  margin-top: -20px;
+  margin-top: 0;
   flex: 2;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
