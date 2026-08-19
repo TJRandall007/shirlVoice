@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import Layout from "../components/layout/layout";
@@ -12,19 +12,80 @@ import ContactActions from "../components/contact-actions/contact-actions";
 
 import { accent } from "../theme";
 
-const VideoPlayer = ({ id, title }) => (
-  <VideoWrapper>
-    <iframe
-      width="100%"
-      src={`https://www.youtube.com/embed/${id}`}
-      title={`${title} voice-over video featuring Shirlie Randall`}
-      loading="lazy"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-  </VideoWrapper>
-);
+let youtubeApiPromise;
+const videoPlayers = new Set();
+
+const loadYouTubeApi = () => {
+  if (typeof window === "undefined") return Promise.resolve(null);
+  if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
+
+  if (!youtubeApiPromise) {
+    youtubeApiPromise = new Promise(resolve => {
+      const previousReady = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (previousReady) previousReady();
+        resolve(window.YT);
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(script);
+      }
+    });
+  }
+
+  return youtubeApiPromise;
+};
+
+const VideoPlayer = ({ id, title }) => {
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    let player;
+    let cancelled = false;
+
+    loadYouTubeApi().then(YT => {
+      if (!YT || cancelled || !iframeRef.current) return;
+
+      player = new YT.Player(iframeRef.current, {
+        events: {
+          onReady: event => videoPlayers.add(event.target),
+          onStateChange: event => {
+            if (event.data !== YT.PlayerState.PLAYING) return;
+
+            videoPlayers.forEach(otherPlayer => {
+              if (otherPlayer !== event.target) otherPlayer.pauseVideo();
+            });
+          },
+        },
+      });
+    });
+
+    return () => {
+      cancelled = true;
+      if (player) {
+        videoPlayers.delete(player);
+        player.destroy();
+      }
+    };
+  }, []);
+
+  return (
+    <VideoWrapper>
+      <iframe
+        ref={iframeRef}
+        width="100%"
+        src={`https://www.youtube.com/embed/${id}?enablejsapi=1`}
+        title={`${title} voice-over video featuring Shirlie Randall`}
+        loading="lazy"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </VideoWrapper>
+  );
+};
 
 const VideoGroup = ({ id, title }) => (
   <div>
