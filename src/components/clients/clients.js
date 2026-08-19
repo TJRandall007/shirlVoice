@@ -51,6 +51,7 @@ function ClientInner({ name, fileName, i }) {
 
 function Client({ name, fileName, i }) {
   const [resi, setResi] = useState(3);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   function handleResize() {
     const w = document.documentElement.clientWidth;
@@ -62,15 +63,22 @@ function Client({ name, fileName, i }) {
 
   useEffect(() => {
     handleResize();
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(motionQuery.matches);
 
     window.addEventListener("resize", handleResize);
+    const handleMotionChange = event => setReduceMotion(event.matches);
+    motionQuery.addListener(handleMotionChange);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      motionQuery.removeListener(handleMotionChange);
+    };
   }, []);
 
   const y = 18;
 
-  return resi > 0 ? (
+  return resi > 0 && !reduceMotion ? (
     <Parallax y={i % 2 ? [y, -y] : [-y, y]} styleOuter={{ flex: 1 }}>
       <ClientInner name={name} fileName={fileName} i={i} />
     </Parallax>
