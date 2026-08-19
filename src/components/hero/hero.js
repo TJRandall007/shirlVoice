@@ -31,7 +31,7 @@ export default function Hero(props) {
   return (
     <HeroContainer className="hero">
       <ContainerDefault>
-        <div className="relative pt-28 pb-32 md:py-48 lg:py-52 xl:py-64">
+        <div className="hero-inner relative pt-28 pb-32 md:py-48 lg:py-52 xl:py-64">
           <Headers>
             <MainTitle text={props.lead} />
             <Sub className="lg:text-2xl lg:w-auto lg:max-w-xl md:text-xl md:w-auto md:max-w-sm pb-12 w-40">
@@ -73,6 +73,12 @@ const HeroContainer = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
+
+  @media (max-width: 414px) {
+    .hero-inner {
+      padding-bottom: 18rem;
+    }
+  }
 `;
 
 const Headers = styled.div`
