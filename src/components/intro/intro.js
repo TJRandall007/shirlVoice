@@ -83,7 +83,7 @@ export function IntroComponentTabletSmall() {
           </Parallax>
 
           <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+            <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
 
@@ -117,7 +117,7 @@ export function IntroComponentTablet() {
           </Parallax>
 
           <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+            <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
 
@@ -161,7 +161,7 @@ export function IntroComponent() {
           </Parallax>
 
           <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+            <IntroCard className="p-8">
               <h2>About me</h2>
               <AboutCopy />
 
@@ -247,6 +247,8 @@ const IntroCard = styled.div`
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  min-height: 430px;
+  padding-bottom: 6rem !important;
   h2 {
     font-size: 2rem;
     font-family: ${font.sans.family};
