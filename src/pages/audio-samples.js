@@ -88,7 +88,7 @@ export const Section = ({
   function handleResize() {
     const w = document.documentElement.clientWidth;
 
-    const size = w > 768 ? 2 : w > 414 ? 1 : 0;
+    const size = w > 768 ? 2 : w > 640 ? 1 : 0;
 
     setResi(size);
   }
@@ -104,7 +104,25 @@ export const Section = ({
   return (
     <section>
       <SectionGrid className="lg:py-16 md:flex">
-        {left && (
+        {resi === 0 && (
+          <>
+            <SectionPlayer
+              title={title}
+              img={img}
+              src={src}
+              resi={resi}
+              showreel={showreel}
+            />
+            <SectionCopy
+              title={title}
+              left={true}
+              children={children}
+              download={dl}
+              resi={resi}
+            />
+          </>
+        )}
+        {resi > 0 && left && (
           <>
             <SectionPlayer
               title={title}
@@ -124,7 +142,7 @@ export const Section = ({
             )}
           </>
         )}
-        {!left && (
+        {resi > 0 && !left && (
           <>
             {resi > 0 && (
               <SectionCopy
@@ -325,6 +343,12 @@ const SectionGridCopy = styled.div`
 
   p {
     padding-bottom: 1em;
+  }
+
+  @media (max-width: 640px) {
+    display: block;
+    height: auto;
+    padding: 32px;
   }
 `;
 
