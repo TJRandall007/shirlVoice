@@ -65,7 +65,7 @@ const SectionCopy = ({ title, left, children, download, resi }) => (
       <SectionMinorTitle classes="pb-6 text-left leading-3" text={title} />
       <div className={left ? "lg:pr-32" : "lg:pr-12"}>{children}</div>
       <Action
-        classes="mt-2 inline-block"
+        classes="demo-download mt-2 inline-block"
         value={`Download ${title} demo (MP3)`}
         to={download}
         download={true}
@@ -348,10 +348,20 @@ const SectionGridCopy = styled.div`
   @media (max-width: 640px) {
     display: block;
     height: auto;
-    padding: 32px;
+    padding: 12px 32px 64px;
+
+    .demo-download {
+      background: ${accent};
+      border-color: ${accent};
+      font-weight: 500;
+    }
   }
 `;
 
 const SectionGridPlayer = styled(SectionGridCopy)`
   flex: 1;
+
+  @media (max-width: 640px) {
+    padding: 32px 32px 12px;
+  }
 `;
