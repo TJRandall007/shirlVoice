@@ -76,7 +76,7 @@ const HeroContainer = styled.div`
 
   @media (max-width: 414px) {
     .hero-inner {
-      padding-bottom: 18rem;
+      padding-bottom: 24rem;
     }
   }
 `;
