@@ -8,7 +8,6 @@ import { background, type } from "../../theme";
 
 // Images
 import SmileImage from "../../images/smile.jpeg";
-import ovcwinner from "../../images/ovcwinner.png";
 
 export default function Hero(props) {
   const [resi, setResi] = useState(3);
@@ -38,21 +37,16 @@ export default function Hero(props) {
             <Sub className="lg:text-2xl lg:w-auto lg:max-w-xl md:text-xl md:w-auto md:max-w-sm pb-12 w-40">
               {props.sub}
             </Sub>
+            {props.supporting && <Supporting>{props.supporting}</Supporting>}
           </Headers>
 
           {resi > 0 ? (
-            <Action to="/audio-samples/" value="Listen to showreels" />
+            <Action to="/audio-samples/" value="Listen to my voice reels" />
           ) : (
             <ActionHeroMobile
               to="/audio-samples/"
-              value="Listen to showreels"
+              value="Listen to my voice reels"
             />
-          )}
-
-          {resi > 0 && (
-            <Badges className="mt-8">
-              <Badge className="w-28 l:w-32" src={ovcwinner} />
-            </Badges>
           )}
 
           {resi > 1 ? (
@@ -89,6 +83,15 @@ const Headers = styled.div`
 const Sub = styled.h2`
   color: ${type.default};
   font-weight: 400;
+`;
+
+const Supporting = styled.p`
+  color: ${type.default};
+  font-size: 1.05rem;
+  max-width: 34rem;
+  padding: 0 0 2rem;
+  position: relative;
+  z-index: 2;
 `;
 
 const ImageContainer = styled.div`
@@ -133,16 +136,4 @@ const ImageContainerMobile = styled.div`
     padding: 0;
     float: right;
   }
-`;
-
-const Badges = styled.div`
-  width: 100%;
-  text-align: left;
-  /* pointer-events: none; */
-  position: absolute;
-  z-index: 2;
-`;
-
-const Badge = styled.img`
-  display: inline;
 `;
