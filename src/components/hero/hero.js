@@ -15,7 +15,7 @@ export default function Hero(props) {
   function handleResize() {
     const w = document.documentElement.clientWidth;
 
-    const size = w > 768 ? 2 : w > 414 ? 1 : 0;
+    const size = w > 768 ? 2 : w > 640 ? 1 : 0;
 
     setResi(size);
   }
@@ -74,7 +74,7 @@ const HeroContainer = styled.div`
   overflow: hidden;
   z-index: 0;
 
-  @media (max-width: 414px) {
+  @media (max-width: 640px) {
     .hero-inner {
       padding-bottom: 24rem;
     }
