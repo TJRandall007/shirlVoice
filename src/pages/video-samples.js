@@ -8,6 +8,7 @@ import { Contact } from "../components/roadblock/contact";
 import { ContainerDefault } from "../components/container/container";
 import Lead from "../components/lead/lead";
 import { SectionTitle, SectionMiniTitle } from "../components/type/heading";
+import ContactActions from "../components/contact-actions/contact-actions";
 
 import { accent } from "../theme";
 
@@ -16,10 +17,11 @@ const VideoPlayer = ({ id, title }) => (
     <iframe
       width="100%"
       src={`https://www.youtube.com/embed/${id}`}
-      title={`${title} video`}
+      title={`${title} voice-over video featuring Shirlie Randall`}
+      loading="lazy"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     />
   </VideoWrapper>
 );
@@ -34,37 +36,35 @@ const VideoGroup = ({ id, title }) => (
 const Intro = () => (
   <ShowreelsIntro className="m-auto lg:w-8/12 lg:text-lg">
     <p>
-      I’ve had the privilege of being the female voiceover for a variety of
-      projects, including television commercials, online apps, explainer videos,
-      international documentaries, and corporate content.
+      Explore Shirlie Randall’s British female voice-over work across television
+      commercials, corporate films, explainer videos, documentaries, online
+      campaigns and digital applications.
     </p>
 
     <p>
-      If your project needs a professional British female voiceover artist,
-      don’t hesitate —{" "}
-      <a className="italic underline" href="/contact">
-        contact me today!
-      </a>
+      From warm and conversational to bright, authoritative or characterful,
+      each performance is tailored to the audience, brand and message.
     </p>
     <p>
-      Take a look at some of my recent work in the video samples below and
-      discover how I can bring your project to life.
+      Looking for a voice for your next production? Email Shirlie to discuss
+      your brief or request a custom audition.
     </p>
+    <ContactActions compact />
   </ShowreelsIntro>
 );
 
 const Showreels = ({ location }) => (
   <Layout location={location}>
     <SEO
-      title="Video & TV Voiceover Showreel"
-      description="See Shirlie Randall's TV and video voiceover work for Disney, Weight Watchers, Morrisons & more — including the Paddington 2 singing advert."
+      title="Voice-over Video Portfolio | TV & Corporate Work"
+      description="Explore Shirlie Randall’s British voice-over portfolio across TV advertising, corporate films, explainer videos, continuity and online campaigns."
     />
-    <Lead title="Shirlie Randall — Video Samples" />
+    <Lead title="Shirlie Randall — Voice-over Video Portfolio" />
     <ShowreelsContainer className="pt-8 lg:py-16">
       <ContainerDefault>
         <Intro />
         <div className="pt-24">
-          <SectionTitle text="TV Advertising" classes="pb-10" />
+          <SectionTitle text="TV advertising" classes="pb-10" />
 
           <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="brjGZcMftqg" title="Crosse and Blackwell" />
@@ -77,7 +77,10 @@ const Showreels = ({ location }) => (
         </div>
 
         <div>
-          <SectionTitle text="Online Videos" classes="pt-10 pb-10" />
+          <SectionTitle
+            text="Corporate and online videos"
+            classes="pt-10 pb-10"
+          />
           <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="wd9O2YUmf4Q" title="Weight Watchers" />
             <VideoGroup id="bqpGmArQiL8" title="Nextdoor App" />
