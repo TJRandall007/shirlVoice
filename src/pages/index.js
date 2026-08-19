@@ -24,7 +24,7 @@ export default function IndexPage(props) {
           sub="British female voice-over artist for commercials, radio imaging, corporate narration and e-learning."
           supporting="Warm, versatile and broadcast-ready, with over 25 years’ experience."
         />
-        <TrustLine className="text-center py-6 md:py-10">
+        <TrustLine className="text-center">
           Female imaging voice for Global’s Smooth Radio Network · Trusted by
           Disney, Sky, NHS, Unilever and leading brands worldwide
         </TrustLine>
@@ -42,10 +42,12 @@ export default function IndexPage(props) {
 }
 
 const TrustLine = styled.p`
+  background: #f7c0c4;
   color: ${type.default};
   font-weight: 500;
   font-size: 15px;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  position: relative;
+  z-index: 5;
 `;
