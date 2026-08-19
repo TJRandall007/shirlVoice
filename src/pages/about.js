@@ -108,78 +108,115 @@ const About = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="About" />
-      <Lead title="Shirlie Randall — About" />
+      <SEO
+        title="About Shirlie Randall | British Female Voice-over Artist"
+        description="Meet Shirlie Randall, an award-winning British female voice-over artist with over 25 years’ experience in commercials, radio imaging, narration and e-learning."
+      />
+      <Lead title="About Shirlie Randall" />
       <AboutContainer className="pt-8 lg:py-16">
         <ContainerRelative>
-          <Copy className="pb-32 m-auto mb-32 md:w-3/4 lg:w-1/3">
-            <Sub>About Me</Sub>
+          <Copy className="pb-32 m-auto mb-32 md:w-3/4 lg:w-1/2">
+            <Sub>About Shirlie</Sub>
             <p>
-              I’m Shirlie Randall, a professional British female voice-over
-              artist, here to bring your scripts to life with style and
-              expertise.
+              I’m Shirlie Randall, an award-winning British female voice-over
+              artist based in Kent. With over 25 years’ experience, I record
+              broadcast-quality voice-overs for clients across the UK and
+              internationally.
             </p>
             <p>
-              Voice-over work has been a cornerstone of my career since my early
-              days as a young actress. I trained at the prestigious Corona
-              Academy Stage School in London, earning top marks in all LAMDA
-              acting exams. Alongside voice acting, I’m also a versatile
-              singer—trained classically and even featured on one of the most
-              iconic charted Trance tracks of all time.
-            </p>
-            <p>
-              I work from my own broadcast-quality studio in Kent, providing
-              quick turnaround times with a professional touch. For in-person
-              sessions, I’m conveniently located within easy reach of central
-              London and also available for remote direction via Skype, Source
-              Connect, or Cleanfeed.
+              My work spans commercials, radio imaging, sponsorship and
+              promotions, corporate narration, e-learning, continuity, IVR and
+              on-hold messaging, in-store radio, retail announcements, jingles
+              and singing.
             </p>
             <FloatImage1 resi={resi} />
 
-            <Sub>What I Offer</Sub>
+            <Sub>Experience and training</Sub>
             <p>
-              With a voice that ranges from{" "}
-              <strong className="font-semibold">bright and upbeat</strong> to{" "}
-              <strong className="font-semibold">smooth and sultry</strong>, I
-              bring variety and versatility to every project. Producers value my
-              ability to "nail a script" on the first take, thanks to my strong
-              communication skills, adaptability, and deep understanding of the
-              craft.
+              Voice-over has been central to my career since my early days as an
+              actress. I trained at Corona Academy Stage School in London and
+              completed my LAMDA acting exams. I’m also a classically trained
+              singer and featured on Darren Tate’s charted trance track “Let the
+              Light Shine In”.
             </p>
 
-            <Sub>Continuing Excellence</Sub>
+            <Sub>Voice, performance and direction</Sub>
             <p>
-              Despite years of experience, I continually hone my skills with
-              ongoing coaching and master classes, including training with
-              world-renowned voice-over coach{" "}
-              <strong className="font-semibold">Nancy Wolfson</strong> at
-              Braintracks Audio. My commitment to growth ensures I deliver
-              cutting-edge performances tailored to your needs.
+              From bright and upbeat to smooth and sophisticated, warm and
+              conversational or clear and authoritative, I adapt every read to
+              the audience, brand and brief. Producers value my communication,
+              versatility and ability to take direction—with many saying I can
+              “nail the script” on the first take.
             </p>
 
-            <Sub>A Family Talent</Sub>
+            <Sub>Radio and broadcasting</Sub>
             <p>
-              Voice acting runs in my family! My brother, Dave Bethell, is an
-              exceptional voice-over artist and a brilliant music composer based
-              in Los Angeles, California. With his own state-of-the-art studio,
-              he delivers world-class audio. Check out his incredible work on{" "}
-              <a href="https://www.instagram.com/voicedave/">his Instagram</a>.
+              I’m the female imaging voice for Global’s Smooth Radio Network and
+              have voiced sponsorships, promotions and imaging for more than 25
+              UK radio stations, including Virgin Radio, KMFM, The Wireless
+              Group and UKRD.
             </p>
-            <FloatImage2 resi={resi} />
-            <Sub>Music to Match</Sub>
+
+            <Sub>Studio and remote sessions</Sub>
             <p>
-              Looking for the perfect soundtrack to accompany your project? I’ve
-              got you covered! My{" "}
-              <strong className="font-semibold">Beats Bakery</strong> music
-              production library offers tracks for every need. Explore our
-              outstanding selection of albums at{" "}
-              <a href="https://beatsbakery.com">beatsbakery.com</a>.
+              I record from a purpose-built, soundproof and acoustically treated
+              studio in Kent. Clients can direct sessions using Source-Connect,
+              Cleanfeed, Zoom, Microsoft Teams or Google Meet, and I can also
+              travel to studios in London and elsewhere.
             </p>
-            <p className="pt-12">
-              With my passion, skill, and dedication, I’m your one-stop solution
-              for professional voice-over and custom music. Let’s create
-              something amazing together!
+
+            <Sub>Professional development</Sub>
+            <p>
+              I continue to refine my performance through coaching and master
+              classes, including training with voice-over coach Nancy Wolfson at
+              Braintracks Audio.
             </p>
+
+            <Sub>Frequently asked questions</Sub>
+            <Faq>
+              <dt>What types of voice-over work do you provide?</dt>
+              <dd>
+                Commercials, radio imaging, sponsorship and promotions,
+                corporate narration, e-learning, continuity, IVR, telephone
+                prompts, on-hold messaging, in-store radio, retail
+                announcements, jingles and singing.
+              </dd>
+              <dt>Can clients direct a recording session remotely?</dt>
+              <dd>
+                Yes. Sessions can be directed through Source-Connect, Cleanfeed,
+                Zoom, Microsoft Teams or Google Meet.
+              </dd>
+              <dt>How quickly can you deliver a recording?</dt>
+              <dd>
+                Same-day delivery is often available, depending on script
+                length, session requirements and availability.
+              </dd>
+              <dt>How much does a professional voice-over cost?</dt>
+              <dd>
+                Rates depend on recording length, usage, platform, territory and
+                campaign duration. Contact Shirlie for a clear, no-obligation
+                quotation.
+              </dd>
+              <dt>Can I request a custom audition?</dt>
+              <dd>
+                A short custom audition can be provided when appropriate,
+                helping you confirm that the style and delivery suit your
+                project.
+              </dd>
+              <dt>Where can I hear more of Shirlie’s work?</dt>
+              <dd>
+                Listen to the <a href="/audio-samples">voice-over demos</a> or
+                view selected <a href="/video-samples">video projects</a>.
+              </dd>
+            </Faq>
+
+            <Related>
+              <Sub>Looking for additional voices?</Sub>
+              <p>
+                Explore a wider selection of professional voice talent at{" "}
+                <a href="https://humanvoiceovers.co.uk">Human Voiceovers</a>.
+              </p>
+            </Related>
             <SignatureBottom />
           </Copy>
         </ContainerRelative>
@@ -219,7 +256,7 @@ const Copy = styled.div`
   }
 
   p {
-    text-align: justify;
+    text-align: left;
     padding-bottom: 1em;
   }
 
@@ -243,6 +280,24 @@ const Copy = styled.div`
       margin: 0 auto;
     }
   }
+`;
+
+const Faq = styled.dl`
+  dt {
+    color: ${type.default};
+    font-weight: 600;
+    margin-top: 1.25rem;
+  }
+
+  dd {
+    margin-top: 0.35rem;
+  }
+`;
+
+const Related = styled.aside`
+  border-top: 4px solid ${accent};
+  margin-top: 3rem;
+  padding-top: 2rem;
 `;
 
 const Float = styled.div`

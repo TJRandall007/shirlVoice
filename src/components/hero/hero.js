@@ -8,7 +8,6 @@ import { background, type } from "../../theme";
 
 // Images
 import SmileImage from "../../images/smile.jpeg";
-import ovcwinner from "../../images/ovcwinner.png";
 
 export default function Hero(props) {
   const [resi, setResi] = useState(3);
@@ -16,7 +15,7 @@ export default function Hero(props) {
   function handleResize() {
     const w = document.documentElement.clientWidth;
 
-    const size = w > 768 ? 2 : w > 414 ? 1 : 0;
+    const size = w > 768 ? 2 : w > 640 ? 1 : 0;
 
     setResi(size);
   }
@@ -32,27 +31,22 @@ export default function Hero(props) {
   return (
     <HeroContainer className="hero">
       <ContainerDefault>
-        <div className="relative pt-28 pb-32 md:py-48 lg:py-52 xl:py-64">
+        <div className="hero-inner relative pt-28 pb-32 md:py-48 lg:py-52 xl:py-64">
           <Headers>
             <MainTitle text={props.lead} />
-            <Sub className="lg:text-2xl lg:w-auto md:text-xl pb-12 w-40">
+            <Sub className="lg:text-2xl lg:w-auto lg:max-w-xl md:text-xl md:w-auto md:max-w-sm pb-12 w-40">
               {props.sub}
             </Sub>
+            {props.supporting && <Supporting>{props.supporting}</Supporting>}
           </Headers>
 
           {resi > 0 ? (
-            <Action to="/audio-samples/" value="Listen to showreels" />
+            <Action to="/audio-samples/" value="Listen to my voice reels" />
           ) : (
             <ActionHeroMobile
               to="/audio-samples/"
-              value="Listen to showreels"
+              value="Listen to my voice reels"
             />
-          )}
-
-          {resi > 0 && (
-            <Badges className="mt-8">
-              <Badge className="w-28 l:w-32" src={ovcwinner} />
-            </Badges>
           )}
 
           {resi > 1 ? (
@@ -79,6 +73,12 @@ const HeroContainer = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
+
+  @media (max-width: 640px) {
+    .hero-inner {
+      padding-bottom: 24rem;
+    }
+  }
 `;
 
 const Headers = styled.div`
@@ -89,6 +89,15 @@ const Headers = styled.div`
 const Sub = styled.h2`
   color: ${type.default};
   font-weight: 400;
+`;
+
+const Supporting = styled.p`
+  color: ${type.default};
+  font-size: 1.05rem;
+  max-width: 34rem;
+  padding: 0 0 2rem;
+  position: relative;
+  z-index: 2;
 `;
 
 const ImageContainer = styled.div`
@@ -133,16 +142,4 @@ const ImageContainerMobile = styled.div`
     padding: 0;
     float: right;
   }
-`;
-
-const Badges = styled.div`
-  width: 100%;
-  text-align: left;
-  /* pointer-events: none; */
-  position: absolute;
-  z-index: 2;
-`;
-
-const Badge = styled.img`
-  display: inline;
 `;

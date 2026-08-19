@@ -9,6 +9,26 @@ import { Signature, SignatureMobile } from "../graphical/signature";
 
 import { font } from "../../theme";
 
+const AboutCopy = () => (
+  <>
+    <p>
+      I’m <strong className="font-semibold">Shirlie Randall</strong>, an
+      award-winning British female voice-over artist with over 25 years’
+      experience bringing scripts, brands and stories to life.
+    </p>
+    <p>
+      From commercials and radio imaging to corporate narration and e-learning,
+      I deliver warm, engaging and broadcast-ready voice-overs tailored to each
+      project.
+    </p>
+    <p>
+      Clients value my clear communication, versatility and ability to take
+      direction—with producers often saying I can “nail the script” on the first
+      take.
+    </p>
+  </>
+);
+
 // Audio
 import CommercialAudio from "../../audio/commercial.mp3";
 import ImagingAudio from "../../audio/imaging.mp3";
@@ -24,24 +44,13 @@ export function IntroComponentMobile() {
         <IntroGridMobile className="py-10">
           <IntroCard className="block p-8 mb-8">
             <h2>About me</h2>
-            <p>
-              I’m Shirlie Randall, and have been the voice for numerous brands
-              and projects for over 20 years! I can adapt my voice to whatever
-              style your project requires, from bright and upbeat to smooth and
-              sultry or natural and warm to cool and fresh, plus many more.
-            </p>
-
-            <p className="mb-20">
-              With excellent communication skills, I am renowned with
-              <br />
-              producers as a female voice over who can “nail a script” <br />
-              on the first take.
-            </p>
+            <AboutCopy />
 
             <SignatureMobile />
 
             <Actions className="px-8 pb-10">
-              <Action to="contact" value="Get in touch" />
+              <Action to="contact" value="Email Shirlie" />
+              <ActionSecondary to="about" value="More about Shirlie" />
             </Actions>
           </IntroCard>
 
@@ -73,22 +82,16 @@ export function IntroComponentTabletSmall() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
+            <IntroCard className="p-8">
               <h2>About me</h2>
-              <p>
-                I’m Shirlie Randall, and have been the voice for numerous brands
-                and projects for over 20 years! I can adapt my voice to whatever
-                style your project requires, from bright and upbeat to smooth
-                and sultry or natural and warm to cool and fresh, plus many
-                more.
-              </p>
+              <AboutCopy />
 
               <Signature />
 
               <Actions className="px-8 pb-10">
-                <Action to="contact" value="Get in touch" />
-                <ActionSecondary to="about" value="Read more" />
+                <Action to="contact" value="Email Shirlie" />
+                <ActionSecondary to="about" value="More about Shirlie" />
               </Actions>
             </IntroCard>
           </Parallax>
@@ -113,22 +116,16 @@ export function IntroComponentTablet() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
+            <IntroCard className="p-8">
               <h2>About me</h2>
-              <p>
-                I’m Shirlie Randall, and have been the voice for numerous brands
-                and projects for over 20 years! I can adapt my voice to whatever
-                style your project requires, from bright and upbeat to smooth
-                and sultry or natural and warm to cool and fresh, plus many
-                more.
-              </p>
+              <AboutCopy />
 
               <Signature />
 
               <Actions className="px-8 pb-10">
-                <Action to="contact" value="Get in touch" />
-                <ActionSecondary to="about" value="Read more" />
+                <Action to="contact" value="Email Shirlie" />
+                <ActionSecondary to="about" value="More about Shirlie" />
               </Actions>
             </IntroCard>
           </Parallax>
@@ -163,31 +160,16 @@ export function IntroComponent() {
             </Box>
           </Parallax>
 
-          <Parallax y={[-40, 40]} styleOuter={{ zIndex: 2, flex: 2 }}>
-            <IntroCard style={{ height: "375px" }} className="p-8">
+          <Parallax y={[0, 0]} styleOuter={{ zIndex: 2, flex: 2 }}>
+            <IntroCard className="p-8">
               <h2>About me</h2>
-              <p>
-                I’m <strong className="font-semibold">Shirlie Randall</strong>,{" "}
-                a female British professional voice-over artist with over 20
-                years of experience bringing brands and projects to life.
-              </p>
-              <p>
-                Versatility is my strength — I can adapt my voice to perfectly
-                match your project’s needs, whether it’s{" "}
-                <strong className="font-semibold">bright and upbeat</strong>, to{" "}
-                <strong className="font-semibold">smooth and sultry</strong>.
-              </p>
-              <p className="pr-64">
-                Renowned for my excellent communication skills and ability to
-                take direction; praised as a voice-over artist who can “nail a
-                script” the first take.
-              </p>
+              <AboutCopy />
 
               <Signature />
 
               <Actions className="px-8 pb-10">
-                <Action to="contact" value="Get in touch" />
-                <ActionSecondary to="about" value="Read more" />
+                <Action to="contact" value="Email Shirlie" />
+                <ActionSecondary to="about" value="More about Shirlie" />
               </Actions>
             </IntroCard>
           </Parallax>
@@ -254,17 +236,19 @@ const IntroGrid = styled.div`
 const IntroGridMobile = styled.div`
   position: relative;
   padding-bottom: 36px;
-  margin-top: -70px;
+  padding-top: 36px;
 `;
 
 const IntroCard = styled.div`
   background: white;
-  margin-top: -20px;
+  margin-top: 0;
   flex: 2;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  min-height: 430px;
+  padding-bottom: 6rem !important;
   h2 {
     font-size: 2rem;
     font-family: ${font.sans.family};

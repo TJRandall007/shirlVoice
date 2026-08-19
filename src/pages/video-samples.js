@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import Layout from "../components/layout/layout";
@@ -8,21 +8,84 @@ import { Contact } from "../components/roadblock/contact";
 import { ContainerDefault } from "../components/container/container";
 import Lead from "../components/lead/lead";
 import { SectionTitle, SectionMiniTitle } from "../components/type/heading";
+import ContactActions from "../components/contact-actions/contact-actions";
 
 import { accent } from "../theme";
 
-const VideoPlayer = ({ id, title }) => (
-  <VideoWrapper>
-    <iframe
-      width="100%"
-      src={`https://www.youtube.com/embed/${id}`}
-      title={`${title} video`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    />
-  </VideoWrapper>
-);
+let youtubeApiPromise;
+const videoPlayers = new Set();
+
+const loadYouTubeApi = () => {
+  if (typeof window === "undefined") return Promise.resolve(null);
+  if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
+
+  if (!youtubeApiPromise) {
+    youtubeApiPromise = new Promise(resolve => {
+      const previousReady = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (previousReady) previousReady();
+        resolve(window.YT);
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(script);
+      }
+    });
+  }
+
+  return youtubeApiPromise;
+};
+
+const VideoPlayer = ({ id, title }) => {
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    let player;
+    let cancelled = false;
+
+    loadYouTubeApi().then(YT => {
+      if (!YT || cancelled || !iframeRef.current) return;
+
+      player = new YT.Player(iframeRef.current, {
+        events: {
+          onReady: event => videoPlayers.add(event.target),
+          onStateChange: event => {
+            if (event.data !== YT.PlayerState.PLAYING) return;
+
+            videoPlayers.forEach(otherPlayer => {
+              if (otherPlayer !== event.target) otherPlayer.pauseVideo();
+            });
+          },
+        },
+      });
+    });
+
+    return () => {
+      cancelled = true;
+      if (player) {
+        videoPlayers.delete(player);
+        player.destroy();
+      }
+    };
+  }, []);
+
+  return (
+    <VideoWrapper>
+      <iframe
+        ref={iframeRef}
+        width="100%"
+        src={`https://www.youtube.com/embed/${id}?enablejsapi=1`}
+        title={`${title} voice-over video featuring Shirlie Randall`}
+        loading="lazy"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </VideoWrapper>
+  );
+};
 
 const VideoGroup = ({ id, title }) => (
   <div>
@@ -34,34 +97,35 @@ const VideoGroup = ({ id, title }) => (
 const Intro = () => (
   <ShowreelsIntro className="m-auto lg:w-8/12 lg:text-lg">
     <p>
-      I’ve had the privilege of being the female voiceover for a variety of
-      projects, including television commercials, online apps, explainer videos,
-      international documentaries, and corporate content.
+      Explore Shirlie Randall’s British female voice-over work across television
+      commercials, corporate films, explainer videos, documentaries, online
+      campaigns and digital applications.
     </p>
 
     <p>
-      If your project needs a professional British female voiceover artist,
-      don’t hesitate —{" "}
-      <a className="italic underline" href="/contact">
-        contact me today!
-      </a>
+      From warm and conversational to bright, authoritative or characterful,
+      each performance is tailored to the audience, brand and message.
     </p>
     <p>
-      Take a look at some of my recent work in the video samples below and
-      discover how I can bring your project to life.
+      Looking for a voice for your next production? Email Shirlie to discuss
+      your brief or request a custom audition.
     </p>
+    <ContactActions compact />
   </ShowreelsIntro>
 );
 
 const Showreels = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Video Samples" />
-    <Lead title="Shirlie Randall — Video Samples" />
+    <SEO
+      title="Voice-over Video Portfolio | TV & Corporate Work"
+      description="Explore Shirlie Randall’s British voice-over portfolio across TV advertising, corporate films, explainer videos, continuity and online campaigns."
+    />
+    <Lead title="Shirlie Randall — Voice-over Video Portfolio" />
     <ShowreelsContainer className="pt-8 lg:py-16">
       <ContainerDefault>
         <Intro />
         <div className="pt-24">
-          <SectionTitle text="TV Advertising" classes="pb-10" />
+          <SectionTitle text="TV advertising" classes="pb-10" />
 
           <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="brjGZcMftqg" title="Crosse and Blackwell" />
@@ -74,7 +138,10 @@ const Showreels = ({ location }) => (
         </div>
 
         <div>
-          <SectionTitle text="Online Videos" classes="pt-10 pb-10" />
+          <SectionTitle
+            text="Corporate and online videos"
+            classes="pt-10 pb-10"
+          />
           <div className="grid gap-8 pb-16 lg:grid-cols-3">
             <VideoGroup id="wd9O2YUmf4Q" title="Weight Watchers" />
             <VideoGroup id="bqpGmArQiL8" title="Nextdoor App" />

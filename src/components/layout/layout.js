@@ -29,10 +29,10 @@ const Layout = ({ location, children }) => {
           abs={location.pathname === "/"}
           path={location.pathname}
         />
-        <div>
+        <ContentWrapper>
           <main>{children}</main>
           <Footer />
-        </div>
+        </ContentWrapper>
       </LayoutWrapper>
     </ParallaxProvider>
   );
@@ -45,7 +45,26 @@ Layout.propTypes = {
 export default Layout;
 
 const LayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 1rem);
+
   p {
     color: ${type.default};
+  }
+
+  @media (min-width: 1024px) {
+    min-height: calc(100vh - 2rem);
+  }
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  main {
+    background: white;
+    flex: 1;
   }
 `;

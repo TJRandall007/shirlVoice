@@ -1,60 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Widget } from "@typeform/embed-react";
 
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import Lead from "../components/lead/lead";
 import { ContainerDefault } from "../components/container/container";
+import ContactActions from "../components/contact-actions/contact-actions";
 
 import { accent } from "../theme";
-
-const Form = () => {
-  return (
-    <div className="pb-12">
-      <div
-        className="typeform-widget"
-        data-url="https://form.typeform.com/to/GGN6imCm?typeform-medium=embed-snippet"
-        style={{ width: "100%", height: "500px" }}
-      ></div>
-    </div>
-  );
-};
 
 const Intro = () => (
   <ContactIntro className="lg:w-8/12 lg:text-lg m-auto">
     <p className="md:px-28">
-      If you need a professional voice over artist for your project then look no
-      further. Call or email me directly, message me or use the contact form
-      below.
+      Tell Shirlie about your script, timings and intended usage. Email
+      directly, copy the address into your preferred email service, or call to
+      discuss your voice-over project.
     </p>
-
-    <p className="pt-8 text-xl md:text-2xl md:pt-12">
-      <span className="px-2 font-semibold block md:inline">
-        +44 (0) 7825 248481
-      </span>
-      <span className="italic select-none">or</span>
-      <span className="px-2 font-semibold">
-        hello<code>@</code>shirlierandall.com
-      </span>
-    </p>
+    <ContactActions />
   </ContactIntro>
 );
 
 const Contact = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Contact" />
-    <Lead title="Shirlie Randall — Contact" />
+    <SEO
+      title="Contact Shirlie Randall | Voice-over Enquiries"
+      description="Contact British female voice-over artist Shirlie Randall for availability, rates, custom auditions and studio recording enquiries."
+    />
+    <Lead title="Contact Shirlie Randall" />
     <ContactContainer className="pt-8 lg:py-16">
       <ContainerDefault>
         <Intro />
-        <div className="w-full h-64" style={{ height: "500px" }}>
-          <Widget
-            id="GGN6imCm"
-            style={{ width: "100%", height: "100%" }}
-            className="my-form"
-          />
-        </div>
       </ContainerDefault>
     </ContactContainer>
   </Layout>

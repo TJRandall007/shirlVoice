@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Shirlie Randall`,
-    description: `Professional female voice over artist.`,
+    description: `Award-quality British female voiceover artist with 20+ years' experience. Currently the voice of Global's Smooth Radio Network. Clients include Disney, NHS & Sky.`,
     author: `@shirlierandall`,
   },
   plugins: [
