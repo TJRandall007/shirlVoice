@@ -16,19 +16,20 @@ export default function IndexPage(props) {
     <Layout location={props.location}>
       <RecoilRoot>
         <SEO
-          title="British Female Voiceover Artist — TV, Radio & Corporate"
-          description="Award-quality British female voiceover artist with 20+ years' experience. Currently the voice of Global's Smooth Radio Network. Clients include Disney, NHS & Sky."
+          title="British Female Voice-over Artist — Commercials & Radio"
+          description="Shirlie Randall is a warm, versatile British female voice-over artist with over 25 years’ experience in commercials, radio imaging, corporate narration and e-learning."
         />
         <Hero
           lead="Shirlie Randall"
-          sub="British Female Voiceover Artist — Warm, versatile & broadcast-ready for commercials, corporate, e-learning & radio"
+          sub="British female voice-over artist for commercials, radio imaging, corporate narration and e-learning."
+          supporting="Warm, versatile and broadcast-ready, with over 25 years’ experience."
         />
         <TrustLine className="text-center py-6 md:py-10">
-          Currently the female imaging voice of Global's Smooth Radio Network
-          · Trusted by Disney, NHS, Sky, Unilever &amp; more
+          Female imaging voice for Global’s Smooth Radio Network · Trusted by
+          Disney, Sky, NHS, Unilever and leading brands worldwide
         </TrustLine>
-        <Clients />
         <Intro />
+        <Clients />
         <Banner
           text="Always friendly, happy to help and a joy to work with"
           name="Jonathan Young"
