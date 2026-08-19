@@ -21,28 +21,19 @@ import StudioImage from "../images/studio.jpeg";
 
 const Intro = () => (
   <StudioIntro className="m-auto lg:w-8/12 lg:text-lg">
-    <p className="font-semibold">
-      Professional Voiceover Services with Modern Studio Facilities.
-    </p>
-
     <p>
-      I operate a fully equipped, state-of-the-art digital recording studio
-      featuring high-quality technology to deliver exceptional audio. With my
-      professional setup and editing software, I can self-produce voiceover
-      sessions in formats including MP3, WAV, and AIFF. My personal studio
-      ensures a <strong className="font-semibold">fast turnaround</strong>,
-      often providing same-day delivery to save you time and money on external
-      studio hire.
+      Shirlie records from a professionally equipped, broadcast-quality home
+      studio in Kent, within easy reach of London.
     </p>
-
     <p>
-      If required, I am conveniently located within easy reach of central London
-      and available to travel to a studio of your choice. Alternatively, you can
-      direct me remotely using platforms such as{" "}
-      <strong className="font-semibold">Skype</strong>,{" "}
-      <strong className="font-semibold">Source Connect</strong>, or{" "}
-      <strong className="font-semibold">Cleanfeed</strong> for seamless
-      collaboration.
+      Voice-over sessions can be recorded, edited and delivered in MP3, WAV or
+      AIFF format, with same-day turnaround available when the project and
+      schedule allow.
+    </p>
+    <p>
+      Clients and producers can direct sessions remotely using Source-Connect,
+      Cleanfeed, Zoom, Microsoft Teams or Google Meet. Shirlie is also available
+      to travel to studios in London and elsewhere when required.
     </p>
   </StudioIntro>
 );
@@ -62,19 +53,17 @@ const List = ({ title, items }) => (
 
 const Lists = () => {
   const left = [
-    ["Sennheiser Microphone:", "Crystal-clear voice capture"],
-    ["Yamaha 01V Digital Mixing Console:", "Professional-grade audio mixing"],
-    ["Focusrite Scarlett 18i20:", "Superior audio interface"],
-    ["Rokit8 Monitors:", "Precision sound monitoring"],
-    ["Adobe Audition Software:", "Advanced editing capabilities"],
-    ["iMac Computer:", "Reliable and efficient production"],
-    ["Broadcast Quality Output:", "Ready for any platform"],
+    ["Sennheiser MKH 416 P48 microphone:", "Broadcast-standard voice capture"],
+    ["Genelec studio monitors:", "Accurate professional monitoring"],
+    ["Adobe Audition:", "Professional recording and editing"],
+    ["Acoustically treated room:", "Purpose-built and soundproof"],
+    ["Broadcast-quality delivery:", "WAV, MP3 and AIFF formats"],
   ];
 
   const right = [
     [
       "Experienced Female Voiceover:",
-      "British RP accent with versatility and charm",
+      "British RP delivery with versatility and warmth",
     ],
     ["Creative & Flexible:", "Tailored voiceovers to match your vision"],
     ["Fast Turnaround:", "Same-day delivery available"],
@@ -103,10 +92,10 @@ const Studio = ({ location }) => (
   <RecoilRoot>
     <Layout location={location}>
       <SEO
-        title="Remote Recording Studio | Same-Day Voiceover Delivery"
-        description="Broadcast-quality home studio in Kent with same-day turnaround. Remote direction via Source Connect, Cleanfeed or Skype for voiceover clients worldwide."
+        title="Professional Voice-over Studio in Kent | Remote Sessions"
+        description="Broadcast-quality voice-over studio in Kent with a Sennheiser MKH 416, acoustically treated room and remote direction via Source-Connect or Cleanfeed."
       />
-      <Lead title="Shirlie Randall — Studio" />
+      <Lead title="Professional Voice-over Studio in Kent" />
       <StudioContainer className="pt-8 lg:py-16">
         <ContainerDefault>
           <Intro />
