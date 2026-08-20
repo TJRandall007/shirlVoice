@@ -42,17 +42,17 @@ export function IntroComponentMobile() {
     <IntroContainer>
       <ContainerDefault>
         <IntroGridMobile className="py-10">
-          <IntroCard className="block p-8 mb-8">
+          <MobileIntroCard className="block p-8 mb-8">
             <h2>About me</h2>
             <AboutCopy />
 
             <SignatureMobile />
 
-            <Actions className="px-8 pb-10">
+            <MobileActions>
               <Action to="contact" value="Email Shirlie" />
               <ActionSecondary to="about" value="More about Shirlie" />
-            </Actions>
-          </IntroCard>
+            </MobileActions>
+          </MobileIntroCard>
 
           <Box>
             <Player
@@ -263,6 +263,11 @@ const IntroCard = styled.div`
   }
 `;
 
+const MobileIntroCard = styled(IntroCard)`
+  min-height: 0;
+  padding-bottom: 2rem !important;
+`;
+
 const Box = styled.div`
   background-position: cover;
   height: 360px;
@@ -272,4 +277,23 @@ const Actions = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+`;
+
+const MobileActions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  position: static;
+
+  a {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 3rem;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+  }
 `;
