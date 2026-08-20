@@ -54,6 +54,11 @@ const SignatureBottom_ = styled(Signature_)`
 `;
 
 const SignatureMobile_ = styled(Signature_)`
+  bottom: auto;
+  display: block;
+  margin: 1rem auto;
   opacity: 0.4;
-  bottom: 15%;
+  position: relative;
+  right: auto;
+  width: min(180px, 60%);
 `;
